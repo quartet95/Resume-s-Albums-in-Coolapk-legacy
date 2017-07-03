@@ -12,5 +12,6 @@
 
 如果有缘面见，我们可以当面讨论应用的各种食用方法，如同我们在网络上键出的热情回复那样。  
 
+忽然想多说一句，最近让我碰到的最让我开心的一款开源应用是<a href="https://play.google.com/store/apps/details?id=com.gazlaws.codeboard">CodeBoard Keyboard for Coding</a>，很大一部分原因是因为<a href="https://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard">黑客键盘</a>的界面实在太让人绝望了。
 
 > Written with [StackEdit](https://stackedit.io/).
