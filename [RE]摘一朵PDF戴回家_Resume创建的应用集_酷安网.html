@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+<title>[RE]摘一朵PDF戴回家_Resume创建的应用集_酷安网</title>
+<meta name="description" content="看文献，刷课件，印成绩，填表单，嚼小说…
+PDF可真不一定是Adobe最强哦(=′ー`)
+主要记录下各PDF阅读器的“阅读”、“编辑”两个方面的功能，方便以后选用
+阅读：目录书签，页面跳转，文本重排，背景换色，
+编辑：复制，注释，签名，页面的删除提取排列，pdf合并
+手头用于测试的PDF一个是1.3M的《而已集》，一个是一篇英文文献，有分栏有公式，还有一篇189M的扫描版《机器视觉算法与应用》
+顺便提醒大家一下..."/>
+<link type="text/css" rel="stylesheet" href="http://static.coolapk.com/bootstrap/3.2.0/css/bootstrap.min.css" media="all">
+<link type="text/css" rel="stylesheet" href="/static/fonts/fix.css" media="all"/>
+<link type="text/css" rel="stylesheet" href="http://static.coolapk.com/v5/css/style.css?1408200" media="all"/>
+<script type="text/javascript" src="http://static.coolapk.com/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="http://static.coolapk.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://static.coolapk.com/kindeditor/4.1.10/kindeditor-min.js"></script>
+<script type="text/javascript" src="http://static.coolapk.com/jkit/jkit.js?1412020"></script>
+<script type="text/javascript" src="http://static.coolapk.com/v5/js/app.js"></script>
+<script type="text/javascript">
+var kdeOptions={cssData:'body{font-size:14px} p{margin:15px auto;}',uploadJson:'/do?c=upload&m=kdeUpload',fileManagerJson:'/do?c=upload&m=kdeExplorer',allowFileManager:true,allowFileUpload:true,allowImageUpload:true,allowFlashUpload:false,allowMediaUpload:false};
+</script>
+</head>
+<body data-uid="568993" data-request-app="Web" data-request-hash="b02c8bdeoq557o">
+
+<div class="navbar navbar-inverse navbar-fixed-top ex-navbar" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-menu">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">酷安网</a>
+            <a href="javascript:void(0);" class="ex-navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-form"><span class="glyphicon glyphicon-search"></span></a>
+            <a href="/home" class="ex-navbar-toggle"><span class="glyphicon glyphicon-user"></span></a>
+            <a href="/notification" class="ex-navbar-toggle"><span class="glyphicon glyphicon-bell"></span><span class="notification-count"></span></a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-left navbar-collapse-menu">
+            <ul class="nav navbar-nav">
+                <li><a href="/">首页</a></li>
+                <li><a href="/apk/">应用</a></li>
+                <li><a href="/game/">游戏</a></li>
+                <li><a href="/faxian/">发现频道</a></li>
+                <li><a href="/album/">应用集</a></li>
+                <li><a href="https://developer.coolapk.com">开发者平台</a></li>
+                <li><a href="/apk/com.coolapk.market">下载手机客户端</a></li>
+            </ul>
+        </div>
+        <div id="exNotifier" class="collapse navbar-collapse navbar-right hidden-xs" data-toggle="exNotify" data-uid="568993" data-popover="#notificationPopover" data-dock="right" data-top="40" data-margin="0">
+            <ul class="nav navbar-nav ex-login-navbar">
+                <li class="visible-sm"><a href="javascript:void(0);" data-toggle="collapse" data-target=".navbar-collapse-form"><span class="glyphicon glyphicon-search"></span></a></li>
+                                <li class="dropdown">
+                    <a href="/home" class="dropdown-toggle" data-toggle="dropdown" data-hover="exDropdown" onclick="location.href='/home';">Resume</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/home">我的酷安</a></li>
+                        <li><a href="/u/568993">我的主页</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li><a href="/settings">设置</a></li>
+                        <li><a href="/settings/profile">个人资料</a></li>
+                        <li><a href="/settings/avatar">我的头像</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li><a href="/account/logout">退出</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="/notification" class="dropdown-toggle" data-toggle="dropdown" data-hover="exDropdown" onclick="location.href='/notification';">消息<span class="notification-badge"></span><b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="menu-item-notification" href="/notification">通知<span class="count pull-right"></span></a></li>
+                        <li class="divider" role="presentation"></li>
+                        <li><a class="menu-item-atme" href="/notification/atme">@我的动态<span class="count pull-right"></span></a></li>
+                        <li><a class="menu-item-atcommentme" href="/notification/atcommentme">@我的评论<span class="count pull-right"></span></a></li>
+                        <li><a class="menu-item-commentme" href="/notification/commentme">回复我的评论<span class="count pull-right"></span></a></li>
+                        <li class="divider" role="presentation"></li>
+                        <li><a class="menu-item-message" href="/message">私信<span class="count pull-right"></span></a></li>
+                    </ul>
+                </li>
+                            </ul>
+        </div>
+        <div class="collapse navbar-collapse navbar-right navbar-collapse-form">
+            <form class="navbar-form ex-navbar-form" role="search" action="/search" method="get">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control input-sm" placeholder="阴阳师" value=""/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default btn-sm" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            </form>
+        </div><!-- /.navbar-collapse -->
+    </div>
+</div>
+
+<div class="ex-page-header hidden-xs">
+    <div class="container">
+        <div class="ex-page-topbar">
+            <div class="ex-page-titlebar">
+                <h1 class="pull-left"><a href="/album">应用集</a></h1>
+                <a href="/album/recommend" class="btn btn-link pull-left">精选推荐</a>
+                <a href="/album/hot" class="btn btn-link pull-left">热门浏览</a>
+                <a href="/album/newest" class="btn btn-link pull-left">刚刚创建</a>
+                <span class="pull-right">
+                    <a href="/album/create" class="btn btn-link ex-link-red">我也要创建应用集，立刻创建应用集</a>
+                    <a href="/album/create" class="btn btn-default">创建应用集</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ex-page-tabbar visible-xs">
+    <ul class="nav nav-tabs ex-nav-tabs nav-tabs-4">
+        <li class="active"><a href="/album">应用集</a></li>
+        <li><a href="/album/recommend">推荐</a></li>
+        <li><a href="/album/hot">热门</a></li>
+        <li><a href="/album/newest">最新</a></li>
+    </ul>
+</div>
+
+<div class="container ex-container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel panel-default ex-card">
+                <div class="panel-heading media ex-card-header ex-card-large-header">
+                    <!--
+                    <a class="pull-left" href="/album/2569287">
+                        <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2017/0418/d2f4e5bdf1d15b5380b17dbd00d8825a-for-136427-o_1bdvikskfogeh08s2q1s1o81j1i-uid-97100.png">
+                    </a>
+                    -->
+                    <div class="media-body">
+                        <h2 class="media-heading">[RE]摘一朵PDF戴回家</h2>
+                        <div class="media-info">
+                            <span class="pull-right">
+                                                            <a href="/album/edit?id=2569287">编辑</a>
+                                                                                    </span>
+                            由 <a href="/u/568993">Resume</a> 2017-01-24创建，共26个应用
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body ex-card-body">
+                    <p>看文献，刷课件，印成绩，填表单，嚼小说…<br />
+PDF可真不一定是Adobe最强哦(=′ー`)<br />
+主要记录下各PDF阅读器的“阅读”、“编辑”两个方面的功能，方便以后选用<br />
+阅读：目录书签，页面跳转，文本重排，背景换色，<br />
+编辑：复制，注释，签名，页面的删除提取排列，pdf合并<br />
+手头用于测试的PDF一个是1.3M的《而已集》，一个是一篇英文文献，有分栏有公式，还有一篇189M的扫描版《机器视觉算法与应用》<br />
+顺便提醒大家一下，基本上我见过的pdf阅读器在文本重排模式下都是不能注释的(oﾟvﾟ)ノ</p>
+                </div>
+            </div>
+            <div class="panel panel-default ex-card">
+                <div class="ex-card-body">
+                    <ul class="media-list ex-card-app-list ex-card-album-app-list">
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.foobnix.pdf.reader">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.foobnix.pdf.reader">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2017/0418/d2f4e5bdf1d15b5380b17dbd00d8825a-for-136427-o_1bdvikskfogeh08s2q1s1o81j1i-uid-97100.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.foobnix.pdf.reader" class="pull-left">Lirbi阅读器</a>
+                                                                    </h4>
+                                <div class="media-intro">特色：除了pdf还支持很多其他格式
+真实特色：可以读乐谱</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.techsoft3d.hps.pdf.reader">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.techsoft3d.hps.pdf.reader">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0808/ddc221169ce2138b20848ab93e28daff-for-30392-o_1apjufrd51nqa1uvq1psiftc4qf1i-uid-97100.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.techsoft3d.hps.pdf.reader" class="pull-left">3D PDF Reader</a>
+                                                                    </h4>
+                                <div class="media-intro">不支持任何含非3D元素的PDF的阅读。
+搞三维建模的人都懂，酷市场没上架之前找了好久才找到这个在手机端能用的阅读器。
+支持各个视向和剖视，能平移能缩放
+不懂估计以后都不会用上，可以忽略嗯</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.artifex.mupdfdemo">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.artifex.mupdfdemo">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2013/0731/12202_1375279947_4799.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.artifex.mupdfdemo" class="pull-left">MuPDF</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：支持书签目录，文本重排略蛋疼(。﹏。)，特别是对于有分栏的pdf，页面跳转靠进度条，有文本查找
+编辑：注释不支持方块圆圈，无页面删除提取等操作
+大文件打开速度一般稍快，不支持裁边</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.netease.pris">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.netease.pris">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0625/408649_1435201592_4934.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.netease.pris" class="pull-left">网易云阅读</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：不支持文本复制，但是文本重排蛮舒服的
+编辑：无
+大文件打开速度一般偏慢，支持裁边奇偶页对称裁。
+跟楼下一起都能对这种扫描版的pdf仍然能够用文本重排进行重排的软件，其实pdf里面已经没有文本了，但它对图像元素进行了裁剪放大和重排，感觉挺厉害的，这功能比楼下的强一些，强在哪里楼下说</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.duokan.reader">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.duokan.reader">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0606/12202_1465211563_6921.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.duokan.reader" class="pull-left">多看阅读</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：文本重排还蛮不错的，有夜间模式，不支持TTS，不支持pdf内超链接跳转
+编辑：只能下划线
+大文件打开速度一般，支持奇偶对称裁边。不过对扫描版pdf的重排跟上面的相比会差一点，我的扫描版pdf有分栏它没识别出来，楼上就可以</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.adobe.reader">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.adobe.reader">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0619/408649_1434703847_1981.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.adobe.reader" class="pull-left">Adobe Acrobat</a>
+                                                                    </h4>
+                                <div class="media-intro">老本家，应用集介绍里面写的阅读功能都有，注释签名也是完美，干脆说下缺点好了
+阅读是全程上下翻页，所以这翻页习惯不适合读小说，也不支持任何删页以及合并pdf这类功能，不过几个月前多了个扫描变pdf的功能，PC端能看3D pdf但安卓端没做这功能，不支持向pdf加入附件
+具有分栏的pdf如果有跨越分栏的图片就会提示不支持分栏然后那一页原样显示
+阅读模式下无法选中文字
+打开扫描版稍大的文件就有些慢了</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.google.android.apps.pdfviewer">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.google.android.apps.pdfviewer">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0305/97100_1425519836_8419.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.google.android.apps.pdfviewer" class="pull-left">Google PDF Viewer</a>
+                                                                    </h4>
+                                <div class="media-intro">其实只是能打开pdf而已，能复制，能搜索文本，有个快速滚动条，再多就真的没有了
+扫描版pdf文件打开速度一般，还可以接受</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/udk.android.reader">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/udk.android.reader">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/1006/12202_1444117427_8123.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/udk.android.reader" class="pull-left">ezPDF Reader</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：全功能支持，能TTS，文本重排支持两种模式，一种是上下翻页适合读列表，一种是左右翻页适合读小说
+编辑：注释有高亮有划线能插录音等附件，能切边，能插空白页删空白页，不能合并pdf
+但是我手头的《而已集》重排以后有些原pdf换行的地方在新阅读模式下会变成空格，其实应该像Adobe一样去掉换行且没有空格的
+扫描版pdf打开挺快的，支持裁边，不过只有手动的，可以分奇偶</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.foxit.mobile.pdf.lite">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.foxit.mobile.pdf.lite">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0303/12202_1456975805_574.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.foxit.mobile.pdf.lite" class="pull-left">Foxit PDF</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：该有都有，国产骄傲，文本重排有些多余的换行去掉了却成了空格，这毛病跟楼上一样的
+编辑：注释多样，比Adobe多一个添加附件，但也不支持删页和页面调整这类功能
+扫描版pdf打开速度一般，比Adobe稍快一点点</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.zeon.Gaaiho.Reader">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.zeon.Gaaiho.Reader">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0605/408649_1433491785_7696.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.zeon.Gaaiho.Reader" class="pull-left">Gaaiho PDF</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：有夜间模式，支持文本重排，但是有些原先换行的地方重排以后还是换行了，以致语义断裂，其他该有都有，有个快速滚动条
+编辑：注释有，不能添附件，不能签名，无页面删除页面提取和pdf合并
+应用虽然图标是质感，但是界面一股winPhone风，很复古━┳━　━┳━
+打开大文件速度一般</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.branchfire.iannotate">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.branchfire.iannotate">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2012/1022/com.branchfire.iannotate.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.branchfire.iannotate" class="pull-left">iAnnotate PDF</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：不支持文本重排，无夜间模式，不支持pdf内超链接跳转，有书签有文本查找
+编辑：据说这软件主要就是注释强势，注释确实蛮全的，有个小锁图标代表的功能没弄懂。没有页面删除pdf合并等等。
+界面一般，似乎更新周期很长
+打开大文件速度一般</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.mantano.reader.android">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.mantano.reader.android">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/1110/12202_1447126417_7411.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.mantano.reader.android" class="pull-left">Mantano Reader Premium</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：毕竟知名老牌了，功能都有，只是文本重排之后还是有某些pdf的文字大小改不了跟不排一样特别小，以致并不能舒心阅读。支持TTS。支持切边。
+编辑：注释不支持方框圆圈这两个基本几何图形，但是支持自由划线，也没有删页合并等功能
+大文件打开速度一般，裁边挺不错的不过不能奇偶页对称裁</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.flyersoft.moonreaderp">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.flyersoft.moonreaderp">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0612/12202_1465724777_9493.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.flyersoft.moonreaderp" class="pull-left">Moon+ Reader Pro</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：接近完美，文字重排也很好，不过重排以后就是上下翻页，还有我那篇双栏文献重排以后出现换行符不消除的问题出现语义间断。支持TTS
+编辑：注释支持方框圆圈文本和自由曲线，无删页合并等功能
+大文件打开速度很快(o゜▽゜)o☆</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.flyersoft.plugin_pdf">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.flyersoft.plugin_pdf">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0316/12202_1458093461_7213.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.flyersoft.plugin_pdf" class="pull-left">PDF Plugin - Moon+ Reader Pro</a>
+                                                                    </h4>
+                                <div class="media-intro">楼上的pdf插件，不过酷市场上架的是Pro版本来就能看pdf</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.naver.synap.office">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.naver.synap.office">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2014/0715/12202_1405411381_8185.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.naver.synap.office" class="pull-left">Naver Office</a>
+                                                                    </h4>
+                                <div class="media-intro">真的就只是能看看而已，什么功能都没有
+大文件打开速度一般</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.mobisystems.editor.office_registered">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.mobisystems.editor.office_registered">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/1222/12202_1450751557_6822.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.mobisystems.editor.office_registered" class="pull-left">OfficeSuite</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：有夜间模式，有文本重排，不过有时重排后原先文字换行重排应该消去的地方变成了空格，和ezpdf一样的情况
+编辑：选择文字以后会跳出注释功能框，有高亮划线和加评论，还可以给pdf加密码
+质感设计很美，然而文件打开以后下面的大黑条是什么鬼。。广告加载不出来？
+发文件打开速度一般，稍快</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.mbr.camellia">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.mbr.camellia">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2014/1113/12202_1415838677_12.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.mbr.camellia" class="pull-left">PDF Max Pro</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：功能都有，支持TTS，不过文本重排也有错误换行的问题
+编辑：注释功能强大是一个特色，该有的都有，还能进行页面的提取删除旋转，也能在pdf里面新增页，不过好像不支持签名
+界面不怎么样。。大文件打开速度很快</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.kdanmobile.android.pdfreader.google.pad">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.kdanmobile.android.pdfreader.google.pad">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0923/408649_1442988903_5915.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.kdanmobile.android.pdfreader.google.pad" class="pull-left">PDF Reader</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：支持夜间背景和护眼背景，文本重排有时会出现多余的换行，支持TTS
+编辑：有注释但不支持方形和圆形，有页面旋转到不支持删页和页面换排序。不能签名
+界面蛮好看的，就是功能有点说多不多说少不少很尴尬
+扫描版文件打开一般偏快</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.pspdfkit.viewer">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.pspdfkit.viewer">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/1026/74ea9668d2b0397756059f0daeffbf23-for-108213-o_1avvc1p08k7l19f41s22vhv92jq-uid-408649.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.pspdfkit.viewer" class="pull-left">PDF Viewer</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：支持书签和文本查找，不支持文本重排，不支持夜间模式，不支持输页码跳转只能从缩略图导航页跳（什么鬼这么不好用）
+编辑：支持签名，不支持注释，支持页面删除提取复制旋转，不能变排序
+扫描版大文件打开速度快</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.eleven.app.pdfreader">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.eleven.app.pdfreader">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0714/257251_1436840038_2111.jpg">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.eleven.app.pdfreader" class="pull-left">PDFReader</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：有书签目录，页面跳转只能靠下方的进度条，文本复制都没有，重排等等均不支持
+编辑：无
+软件还带广告。。。(*￣rǒ￣)，虽然不怎么碍眼</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/ru.zed.kiosk">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/ru.zed.kiosk">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0625/12202_1466834534_8601.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/ru.zed.kiosk" class="pull-left">Reader</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：支持书签目录文本查找，其他都没有
+编辑：支持对整页添加文字注释，支持笔刷，其他都没有
+界面很漂亮，但对文字PDF其实不是很好，其实这个阅读器主要是用来看漫画的比如CBZ格式什么的
+大文件打开很慢，可能跟它是全部加载完才显示有关，一旦有一页显示出来那么其他页也就都加载完了</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.cerience.reader.app">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.cerience.reader.app">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2012/0817/12202_1345173957_2567.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.cerience.reader.app" class="pull-left">RepliGo Reader</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：该有都有，能换背景，就是界面简陋别嫌弃。文本重排以后也有换行符没完全消去变空格的问题，上下翻页
+编辑：可以签名，也有注释，别的功能没了
+大文件打开速度蛮快的</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.smartdevices">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.smartdevices">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2012/1106/12202_1352206812_1602.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.smartdevices" class="pull-left">SmartQ Reader</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：支持书签目录，支持多种背景，支持裁边，无文本重排
+编辑：支持注释，支持切边，不支持签名，不支持删页等页面操作
+太老没有更新了，扫描不出来我手机里的pdf只能通过打开方式选它打开。
+大文件打开速度很快，裁边也蛮舒服的，可以自动裁也可以手动，就是不知道为什么我这里手动裁只能裁上边左边和右边没有下边</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.hestabit.pdfreader">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.hestabit.pdfreader">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0731/257251_1438308894_087.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.hestabit.pdfreader" class="pull-left">Speed Pdf Reader</a>
+                                                                    </h4>
+                                <div class="media-intro">比较奇葩的阅读器，打开的时候一定要设定个移动速度，然后文字会在界面上以你设定的速度（比如400words/min）滚动，估计是用来看小说什么的。强制文本重排。
+小文件还好，但是打开一个1.3M的文件过了半分钟没开我等不及就放弃了，文字越多打开越慢，图片无法显示</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/cn.wps.moffice_eng">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/cn.wps.moffice_eng">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2014/0530/12202_1401431978_3136.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/cn.wps.moffice_eng" class="pull-left">WPS Office</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：除TTS外都有，文本重排完美
+编辑：对不起，除了高亮下划线删除线，这个真没有
+打开扫描版大文件的速度一般，裁边支持奇偶对称</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.xodo.pdf.reader">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.xodo.pdf.reader">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/1208/12202_1449539084_4266.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.xodo.pdf.reader" class="pull-left">Xodo Docs</a>
+                                                                    </h4>
+                                <div class="media-intro">阅读：除了TTS以外都有(・-・*)，文本重排有时换行符不去除的问题，切边可以自动可以手动
+编辑：支持注释和签名，支持添加图片附件，支持页面的删除复制增添旋转重排和pdf合并
+质感设计，这个我留着御用了(๐॔˃̶ᗜ˂̶๐॓)
+打开大文件速度很快，裁边可自动可手动可分奇偶页</div>
+                            </div>
+                        </li>
+                                            </ul>
+                </div>
+                <div class="ex-card-toolbar">
+                    <span class="pull-right">
+                        <button type="button" class="btn btn-default btn-sm" data-reply-type="feed" data-reply-id="2569287" data-username="Resume" onclick="$(this).exComment('replyForm');">添加一个评论</button>
+                    </span>
+                    <button type="button" class="btn btn-default btn-sm" data-request-type="post" data-request-url="/do?c=feed&m=like&id=2569287" data-request-target="this" onclick="$(this).exRequest();"><span class="icomoon icomoon-like"></span>61</button>
+                </div>
+            </div>
+
+            <div id="feedList">
+                <div id="feed-2569287" class="panel panel-default ex-card ex-card-feed">
+    <div class="panel-heading ex-card-header">
+        <h2>应用集评论 ···<span class="dateline pull-right">共64条评论</span></h2>
+    </div>
+    <div class="ex-card-comment">
+        <ul class="media-list ex-card-comment-list">
+                        <li id="reply-4414153" class="media" data-reply-type="reply" data-reply-id="4414153" data-username="司机放假">
+    <a class="pull-left" href="/u/621535" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/62/15/35_avatar_small.jpg" alt="司机放假"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/621535" class="link">司机放假</a> <span class="dateline">2017-01-24</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4414153" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4414153" data-username="司机放假" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        多看算不算[doge酷]    </div>
+</li>
+                        <li id="reply-4414256" class="media" data-reply-type="reply" data-reply-id="4414256" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/621535" class="link">司机放假</a> <span class="dateline">2017-01-24</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4414256" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4414256" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        非专门读pdf的软件后面再考虑#(吐舌)    </div>
+</li>
+                        <li id="reply-4422917" class="media" data-reply-type="reply" data-reply-id="4422917" data-username="caliban">
+    <a class="pull-left" href="/u/484864" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/48/48/64_avatar_small.jpg" alt="caliban"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/484864" class="link">caliban</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4422917" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4422917" data-username="caliban" onclick="$(this).exComment('replyForm');">回复(3)</a>
+            </span>
+        </div>
+        MIUI自带WPS，倒是免了我选择困难。<img src="http://static.coolapk.com/emoticons/default/13.gif" alt="哈哈"/>    </div>
+</li>
+                        <li id="reply-4422951" class="media" data-reply-type="reply" data-reply-id="4422951" data-username="桃谷エリカ">
+    <a class="pull-left" href="/u/653538" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/65/35/38_avatar_small.jpg" alt="桃谷エリカ"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/653538" class="link">桃谷エリカ</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4422951" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4422951" data-username="桃谷エリカ" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        mark    </div>
+</li>
+                        <li id="reply-4425127" class="media" data-reply-type="reply" data-reply-id="4425127" data-username="andyhgt">
+    <a class="pull-left" href="/u/777695" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/77/76/95_avatar_small.jpg" alt="andyhgt"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/777695" class="link">andyhgt</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4425127" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4425127" data-username="andyhgt" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        厉害    </div>
+</li>
+                        <li id="reply-4425192" class="media" data-reply-type="reply" data-reply-id="4425192" data-username="可卿救我">
+    <a class="pull-left" href="/u/672832" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/67/28/32_avatar_small.jpg" alt="可卿救我"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/672832" class="link">可卿救我</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4425192" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4425192" data-username="可卿救我" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        提到重排，怎能没有多看    </div>
+</li>
+                        <li id="reply-4425475" class="media" data-reply-type="reply" data-reply-id="4425475" data-username="witter">
+    <a class="pull-left" href="/u/432662" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/43/26/62_avatar_small.jpg" alt="witter"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/432662" class="link">witter</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4425475" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4425475" data-username="witter" onclick="$(this).exComment('replyForm');">回复(8)</a>
+            </span>
+        </div>
+        专门的pdf阅读器也应该使用扫描版的pdf大文件测试的丫，一般的那种world转pdf形式的小文件谁还使用专门的pdf阅读器，多看云阅读体验不更好？原因是扫描版的重排没用，只能裁边。扫描版的文件跟一般的书本体验差不多，而一般的world转的虽然重排支持很好，纯文字的文本效果好，但是如果有图片图表的话效果就不好了。我个人喜欢扫描版的文件～    </div>
+</li>
+                        <li id="reply-4425553" class="media" data-reply-type="reply" data-reply-id="4425553" data-username="mendaxca">
+    <a class="pull-left" href="/u/668420" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/66/84/20_avatar_small.jpg" alt="mendaxca"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/668420" class="link">mendaxca</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4425553" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4425553" data-username="mendaxca" onclick="$(this).exComment('replyForm');">回复(4)</a>
+            </span>
+        </div>
+        怎么没有mupdf    </div>
+</li>
+                        <li id="reply-4425729" class="media" data-reply-type="reply" data-reply-id="4425729" data-username="witter">
+    <a class="pull-left" href="/u/432662" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/43/26/62_avatar_small.jpg" alt="witter"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/432662" class="link">witter</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4425729" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4425729" data-username="witter" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        PDF Viewer在play只是测试版的抢先体验，还没有正式上架～    </div>
+</li>
+                        <li id="reply-4426067" class="media" data-reply-type="reply" data-reply-id="4426067" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/484864" class="link">caliban</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4426067" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4426067" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        确实#(滑稽)，但是WPS没有注释什么的功能    </div>
+</li>
+                        <li id="reply-4426078" class="media" data-reply-type="reply" data-reply-id="4426078" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/777695" class="link">andyhgt</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4426078" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4426078" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        #(吐舌)#(吐舌)    </div>
+</li>
+                        <li id="reply-4426085" class="media" data-reply-type="reply" data-reply-id="4426085" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/672832" class="link">可卿救我</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4426085" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4426085" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        嗯嗯，马上去下一个试一下    </div>
+</li>
+                        <li id="reply-4426134" class="media" data-reply-type="reply" data-reply-id="4426134" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/432662" class="link">witter</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4426134" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4426134" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        主要是手头暂时没有[dw哭]，平时用的扫描版PDF不太多来着，我去找找看能不能找到个来测试[doge呵斥]    </div>
+</li>
+                        <li id="reply-4426453" class="media" data-reply-type="reply" data-reply-id="4426453" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/432662" class="link">witter</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4426453" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4426453" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        等等话说纯文字版pdf不用专门的pdf阅读器一般用什么<img src="http://static.coolapk.com/emoticons/default/3.gif" alt="发呆"/>    </div>
+</li>
+                        <li id="reply-4426515" class="media" data-reply-type="reply" data-reply-id="4426515" data-username="witter">
+    <a class="pull-left" href="/u/432662" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/43/26/62_avatar_small.jpg" alt="witter"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/432662" class="link">witter</a>回复<a href="/u/568993" class="link">Resume</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4426515" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4426515" data-username="witter" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        用多看网易云阅读体验也很好～    </div>
+</li>
+                        <li id="reply-4426839" class="media" data-reply-type="reply" data-reply-id="4426839" data-username="小蚊子0v0">
+    <a class="pull-left" href="/u/364029" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/36/40/29_avatar_small.jpg" alt="小蚊子0v0"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/364029" class="link">小蚊子0v0</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4426839" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4426839" data-username="小蚊子0v0" onclick="$(this).exComment('replyForm');">回复(10)</a>
+            </span>
+        </div>
+        目前主要用xodo和Adobe    </div>
+</li>
+                        <li id="reply-4426844" class="media" data-reply-type="reply" data-reply-id="4426844" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/432662" class="link">witter</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4426844" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4426844" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        原来如此[doge呵斥]<br />
+其实那种带图表的或者扫描版的pdf我们老师和一些学生都是买的平板读，字够大而且刚好满屏幕装下一面，正在考虑去买一个来着#(吐舌)    </div>
+</li>
+                        <li id="reply-4426923" class="media" data-reply-type="reply" data-reply-id="4426923" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/364029" class="link">小蚊子0v0</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4426923" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4426923" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        确实，这俩配合几乎就完美了#(开心)    </div>
+</li>
+                        <li id="reply-4426940" class="media" data-reply-type="reply" data-reply-id="4426940" data-username="witter">
+    <a class="pull-left" href="/u/432662" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/43/26/62_avatar_small.jpg" alt="witter"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/432662" class="link">witter</a>回复<a href="/u/568993" class="link">Resume</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4426940" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4426940" data-username="witter" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        平板太大不方便，我买了也没怎么用，手机上用个支持裁边功能的pdf阅读器体验也还好～    </div>
+</li>
+                        <li id="reply-4427151" class="media" data-reply-type="reply" data-reply-id="4427151" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/432662" class="link">witter</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4427151" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4427151" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        嗯嗯大屏幕的东西还是比较适合坐办公室的人用[笑哭][笑哭][笑哭]    </div>
+</li>
+                        <li id="reply-4427243" class="media" data-reply-type="reply" data-reply-id="4427243" data-username="witter">
+    <a class="pull-left" href="/u/432662" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/43/26/62_avatar_small.jpg" alt="witter"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/432662" class="link">witter</a>回复<a href="/u/364029" class="link">小蚊子0v0</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4427243" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4427243" data-username="witter" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        我个人感觉无论是手机上还是电脑上adobe体验都不怎么好。wps支持裁边，打开文件也很快，但是不能做笔记批注，单纯阅读还是很不错的。如果做笔记的话，下面这个是个不错的选择，也是我用过打开文件速度最快，最流畅的，各种功能都有，跟电脑版的福昕pdf有的一比，评论区有汉化版～<a class="feed-link-url" href="http://www.coolapk.com/apk/com.cerience.reader.app" title="PDF阅读器:RepliGo Reader" target="_blank" rel="nofollow">【PDF阅读器:RepliGo Reader】</a>    </div>
+</li>
+                        <li id="reply-4427250" class="media" data-reply-type="reply" data-reply-id="4427250" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/668420" class="link">mendaxca</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4427250" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4427250" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        用了一下发现文本重排以后各种文字错位额[笑哭]，怎么回事#(乖)    </div>
+</li>
+                        <li id="reply-4427606" class="media" data-reply-type="reply" data-reply-id="4427606" data-username="mendaxca">
+    <a class="pull-left" href="/u/668420" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/66/84/20_avatar_small.jpg" alt="mendaxca"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/668420" class="link">mendaxca</a>回复<a href="/u/568993" class="link">Resume</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4427606" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4427606" data-username="mendaxca" onclick="$(this).exComment('replyForm');">回复(2)</a>
+            </span>
+        </div>
+        确实，这个重排不咋样,只支持简单的文本，不过这个就是一个很简单的查看器，还是全平台支持的<br />
+用了一下RepliGo Reader的确不错，渲染速度和重排也很好，不过要钱啊    </div>
+</li>
+                        <li id="reply-4427822" class="media" data-reply-type="reply" data-reply-id="4427822" data-username="小蚊子0v0">
+    <a class="pull-left" href="/u/364029" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/36/40/29_avatar_small.jpg" alt="小蚊子0v0"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/364029" class="link">小蚊子0v0</a>回复<a href="/u/432662" class="link">witter</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4427822" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4427822" data-username="小蚊子0v0" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        其它的清晰度不够，并且流畅度在我手机上Adobe和xodo是最流畅的，xodo支持裁边，Adobe打开速度最快，不过我都是先用电脑裁好放进去的    </div>
+</li>
+                        <li id="reply-4427887" class="media" data-reply-type="reply" data-reply-id="4427887" data-username="witter">
+    <a class="pull-left" href="/u/432662" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/43/26/62_avatar_small.jpg" alt="witter"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/432662" class="link">witter</a>回复<a href="/u/364029" class="link">小蚊子0v0</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4427887" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4427887" data-username="witter" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        小文件还好，两三百M的大文件就很考验流畅度了。清晰度一般的都还好吧～    </div>
+</li>
+                        <li id="reply-4427922" class="media" data-reply-type="reply" data-reply-id="4427922" data-username="小蚊子0v0">
+    <a class="pull-left" href="/u/364029" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/36/40/29_avatar_small.jpg" alt="小蚊子0v0"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/364029" class="link">小蚊子0v0</a>回复<a href="/u/432662" class="link">witter</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4427922" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4427922" data-username="小蚊子0v0" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        包含大图的多页数PDF在wps上打开，快速拖动，渲染会有延迟，Adobe则毫无延迟，我手机一加3T    </div>
+</li>
+                        <li id="reply-4428052" class="media" data-reply-type="reply" data-reply-id="4428052" data-username="witter">
+    <a class="pull-left" href="/u/432662" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/43/26/62_avatar_small.jpg" alt="witter"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/432662" class="link">witter</a>回复<a href="/u/364029" class="link">小蚊子0v0</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4428052" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4428052" data-username="witter" onclick="$(this).exComment('replyForm');">回复(2)</a>
+            </span>
+        </div>
+        wps确实有这个问题，RepliGo就很多了，adobe功能太简陋了，综合流畅度和功能来看RepliGo很平衡～    </div>
+</li>
+                        <li id="reply-4428090" class="media" data-reply-type="reply" data-reply-id="4428090" data-username="小蚊子0v0">
+    <a class="pull-left" href="/u/364029" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/36/40/29_avatar_small.jpg" alt="小蚊子0v0"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/364029" class="link">小蚊子0v0</a>回复<a href="/u/432662" class="link">witter</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4428090" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4428090" data-username="小蚊子0v0" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        你可以试试xodo    </div>
+</li>
+                        <li id="reply-4428130" class="media" data-reply-type="reply" data-reply-id="4428130" data-username="witter">
+    <a class="pull-left" href="/u/432662" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/43/26/62_avatar_small.jpg" alt="witter"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/432662" class="link">witter</a>回复<a href="/u/364029" class="link">小蚊子0v0</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4428130" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4428130" data-username="witter" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        用过呢，感觉流畅度不怎么好，还有那个PDF Max ，做笔记还是很不错的～    </div>
+</li>
+                        <li id="reply-4428147" class="media" data-reply-type="reply" data-reply-id="4428147" data-username="小蚊子0v0">
+    <a class="pull-left" href="/u/364029" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/36/40/29_avatar_small.jpg" alt="小蚊子0v0"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/364029" class="link">小蚊子0v0</a>回复<a href="/u/432662" class="link">witter</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4428147" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4428147" data-username="小蚊子0v0" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        repligo刚才试了，不能自动扫描设备的文档，好慢找[dw哭]    </div>
+</li>
+                        <li id="reply-4428169" class="media" data-reply-type="reply" data-reply-id="4428169" data-username="witter">
+    <a class="pull-left" href="/u/432662" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/43/26/62_avatar_small.jpg" alt="witter"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/432662" class="link">witter</a>回复<a href="/u/364029" class="link">小蚊子0v0</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4428169" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4428169" data-username="witter" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        最大的缺点了，只能从本地选择打开了～    </div>
+</li>
+                        <li id="reply-4429915" class="media" data-reply-type="reply" data-reply-id="4429915" data-username="witter">
+    <a class="pull-left" href="/u/432662" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/43/26/62_avatar_small.jpg" alt="witter"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/432662" class="link">witter</a>回复<a href="/u/668420" class="link">mendaxca</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4429915" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4429915" data-username="witter" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        汉化版，不要钱～<a class="feed-link-url" href="http://t.cn/RxGJo3l" title="http://pan.baidu.com/share/link?shareid=3664293835&amp;uk=3677583875" target="_blank" rel="nofollow">查看链接»</a>    </div>
+</li>
+                        <li id="reply-4431476" class="media" data-reply-type="reply" data-reply-id="4431476" data-username="baoyudu">
+    <a class="pull-left" href="/u/495839" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/49/58/39_avatar_small.jpg" alt="baoyudu"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/495839" class="link">baoyudu</a>回复<a href="/u/668420" class="link">mendaxca</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4431476" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4431476" data-username="baoyudu" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        多看支持文本重排呀。    </div>
+</li>
+                        <li id="reply-4435683" class="media" data-reply-type="reply" data-reply-id="4435683" data-username="wind_breaker">
+    <a class="pull-left" href="/u/445142" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/44/51/42_avatar_small.jpg" alt="wind_breaker"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/445142" class="link">wind_breaker</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4435683" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4435683" data-username="wind_breaker" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        静读天下那个插件应该是针对免费版的？我记得广告版貌似不能看PDF来着。    </div>
+</li>
+                        <li id="reply-4435723" class="media" data-reply-type="reply" data-reply-id="4435723" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/445142" class="link">wind_breaker</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4435723" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4435723" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        <img src="http://static.coolapk.com/emoticons/default/3.gif" alt="发呆"/>原来如此    </div>
+</li>
+                        <li id="reply-4439649" class="media" data-reply-type="reply" data-reply-id="4439649" data-username="大族长">
+    <a class="pull-left" href="/u/645004" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/64/50/04_avatar_small.jpg" alt="大族长"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/645004" class="link">大族长</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4439649" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4439649" data-username="大族长" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        这很可以    </div>
+</li>
+                        <li id="reply-4439747" class="media" data-reply-type="reply" data-reply-id="4439747" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/645004" class="link">大族长</a> <span class="dateline">2017-01-25</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4439747" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4439747" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        #(吐舌)#(乖)#(吐舌)    </div>
+</li>
+                        <li id="reply-4452472" class="media" data-reply-type="reply" data-reply-id="4452472" data-username="plhs250">
+    <a class="pull-left" href="/u/546826" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/54/68/26_avatar_small.jpg" alt="plhs250"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/546826" class="link">plhs250</a> <span class="dateline">2017-01-26</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4452472" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4452472" data-username="plhs250" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        电脑上有个caijviewer（好像是这个名字），看pdf超级强大，印象很好，不知道有没有手机的。    </div>
+</li>
+                        <li id="reply-4477803" class="media" data-reply-type="reply" data-reply-id="4477803" data-username="a234852">
+    <a class="pull-left" href="/u/461321" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/46/13/21_avatar_small.jpg" alt="a234852"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/461321" class="link">a234852</a> <span class="dateline">2017-01-27</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4477803" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4477803" data-username="a234852" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        有木有PDF to word的Android端软件？……    </div>
+</li>
+                        <li id="reply-4477881" class="media" data-reply-type="reply" data-reply-id="4477881" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/461321" class="link">a234852</a> <span class="dateline">2017-01-27</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4477881" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4477881" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        目前没发现[qqdoge]，这样的转换一般都是要花钱的，PC端有些正版软件能免费转换5页，也有破解版Adobe Acrobat直接转不过比较麻烦。<br />
+手机上你可以试试cn.office-converter.com，不过效果可能不太好[笑哭]    </div>
+</li>
+                        <li id="reply-4478188" class="media" data-reply-type="reply" data-reply-id="4478188" data-username="adremer">
+    <a class="pull-left" href="/u/478111" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/47/81/11_avatar_small.jpg" alt="adremer"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/478111" class="link">adremer</a>回复<a href="/u/568993" class="link">Resume</a> <span class="dateline">2017-01-27</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4478188" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4478188" data-username="adremer" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        现在有了，不过要会员#(滑稽)#(滑稽)用不起[二哈]    </div>
+</li>
+                        <li id="reply-4478620" class="media" data-reply-type="reply" data-reply-id="4478620" data-username="zxkmm">
+    <a class="pull-left" href="/u/391653" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/39/16/53_avatar_small.jpg" alt="zxkmm"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/391653" class="link">zxkmm</a> <span class="dateline">2017-01-27</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4478620" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4478620" data-username="zxkmm" onclick="$(this).exComment('replyForm');">回复(4)</a>
+            </span>
+        </div>
+        楼主，求助有没有自动识别歌谱行数的pdf阅读器，点一下屏幕翻一行那种。现在用的点一下屏幕翻一行的，多翻几次就歪了，又要停下来拖动一下。有时候需要用手机看歌谱，翻页太小了看不清。谢谢了!    </div>
+</li>
+                        <li id="reply-4478831" class="media" data-reply-type="reply" data-reply-id="4478831" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/478111" class="link">adremer</a> <span class="dateline">2017-01-27</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4478831" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4478831" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        哈#(乖)    </div>
+</li>
+                        <li id="reply-4478852" class="media" data-reply-type="reply" data-reply-id="4478852" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/391653" class="link">zxkmm</a> <span class="dateline">2017-01-27</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4478852" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4478852" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        咦#(乖)，不学乐器所以没见过这样的软件呢[dw哭]，你现在用的是那个呀[笑哭]    </div>
+</li>
+                        <li id="reply-4479150" class="media" data-reply-type="reply" data-reply-id="4479150" data-username="zxkmm">
+    <a class="pull-left" href="/u/391653" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/39/16/53_avatar_small.jpg" alt="zxkmm"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/391653" class="link">zxkmm</a>回复<a href="/u/568993" class="link">Resume</a> <span class="dateline">2017-01-27</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4479150" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4479150" data-username="zxkmm" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        我用的是pro pdf reader。这个对谱子有点优化。但是不能满足我的要求    </div>
+</li>
+                        <li id="reply-4481432" class="media" data-reply-type="reply" data-reply-id="4481432" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/391653" class="link">zxkmm</a> <span class="dateline">2017-01-27</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4481432" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4481432" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        [笑哭]长见识了，目前没见过这样的阅读器[笑哭]以后我留心一下    </div>
+</li>
+                        <li id="reply-4481489" class="media" data-reply-type="reply" data-reply-id="4481489" data-username="zxkmm">
+    <a class="pull-left" href="/u/391653" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/39/16/53_avatar_small.jpg" alt="zxkmm"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/391653" class="link">zxkmm</a>回复<a href="/u/568993" class="link">Resume</a> <span class="dateline">2017-01-27</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4481489" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4481489" data-username="zxkmm" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        谢谢大神!    </div>
+</li>
+                        <li id="reply-4645489" class="media" data-reply-type="reply" data-reply-id="4645489" data-username="wonkiall">
+    <a class="pull-left" href="/u/558344" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/55/83/44_avatar_small.jpg" alt="wonkiall"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/558344" class="link">wonkiall</a> <span class="dateline">2017-02-02</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4645489" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4645489" data-username="wonkiall" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        支持Xodo，智器有修改版，可以扫描手机    </div>
+</li>
+                        <li id="reply-4646411" class="media" data-reply-type="reply" data-reply-id="4646411" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/558344" class="link">wonkiall</a> <span class="dateline">2017-02-02</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4646411" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4646411" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        原来有修改版#(惊讶)[doge呵斥]    </div>
+</li>
+                        <li id="reply-4698923" class="media" data-reply-type="reply" data-reply-id="4698923" data-username="知北遊">
+    <a class="pull-left" href="/u/381828" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/38/18/28_avatar_small.jpg" alt="知北遊"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/381828" class="link">知北遊</a> <span class="dateline">2017-02-04</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=4698923" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="4698923" data-username="知北遊" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        收藏一下    </div>
+</li>
+                    </ul>
+                <div class="ex-card-comment-more text-center">
+            <ul class="pager" data-toggle="exAutoload" data-url="/feed/2569287?p=%s" data-request-target=".ex-card-comment-list" data-request-alert="this">
+                <li class="disabled"><a href="###">上一页</a></li><li><a href="/feed/2569287?p=2" data-request-target=".ex-card-comment-list" data-request-alert="this" onclick="$(this).exRequest();">下一页</a></li>            </ul>
+        </div>
+                <div class="ex-card-comment-form">
+            <form class="ex-reply-form" action="/do?c=feed&m=reply" method="post" onsubmit="$(this).exRequest();return false;">
+                <input type="hidden" name="postSubmit" value="1" />
+                <input type="hidden" name="requestHash" value="b02c8bdeoq557o"/>
+                <input type="hidden" name="requestFrom" value="album_view"/>
+                <input type="hidden" name="rtype" value="feed"/>
+                <input type="hidden" name="rid" value="2569287"/>
+                <div class="alert hide ex-request-alert"></div>
+                <div class="input-group">
+                    <span class="input-group-addon icomoon icomoon-smile" data-toggle="exPopover" data-popover="#emoticonsPopover" data-target=".ex-reply-panel>form>div>textarea" data-dock="left" data-placement="top"></span>
+                    <textarea name="message" class="form-control" placeholder="回复Resume:" data-auto-height="40" onkeydown="$(this).exKeyDown(event);" onkeyup="$(this).exKeyUp(event);"></textarea>
+                    <span class="input-group-addon btn btn-success" onclick="$('.ex-card-comment-form>form').submit();">评论</span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="panel panel-default ex-card">
+    <div class="panel-heading ex-card-header">
+        <h2>创建应用集 ···</h2>
+    </div>
+    <div class="ex-card-content">你也可以来创建应用集，应用集可以收藏保存常用的软件列表...</div>
+    <div class="ex-card-wrapper text-center">
+        <a class="btn btn-default" href="/album/create">创建应用集</a>
+    </div>
+</div>
+<div class="panel panel-default ex-card">
+    <div class="panel-heading ex-card-header ex-no-border">
+        <h2>Resume的其他应用集 ···</h2>
+    </div>
+    <div class="ex-card-body media-list ex-card-album-list ex-side-album-list">
+                <div id="album-3313067" class="media">
+    <a class="pull-left" href="/album/3313067">
+        <img class="media-object" src="http://image.coolapk.com/apk_logo/2016/0613/12202_1465784488_0388.png">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="/album/3313067">我们都喜爱屁屁</a></h4>
+        <div class="media-info">
+            Resume，共16个应用        </div>
+        (^。^)一个市场才不够呢，所以平时我都喜欢在哪里找新鲜..    </div>
+</div>
+                <div id="album-3220661" class="media">
+    <a class="pull-left" href="/album/3220661">
+        <img class="media-object" src="http://image.coolapk.com/apk_logo/2017/0106/ic_splash_screen-for-126299-o_1b5pp5kdd1kvu1he61d4p1spfij2q-uid-553418.png">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="/album/3220661">自用图标包</a></h4>
+        <div class="media-info">
+            Resume，共15个应用        </div>
+        自用的。。没点评
+因为图标包这种东西我只能说出“质感，不..    </div>
+</div>
+                <div id="album-3187239" class="media">
+    <a class="pull-left" href="/album/3187239">
+        <img class="media-object" src="http://image.coolapk.com/apk_logo/2014/0703/97100_1404394862_1375.png">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="/album/3187239">No Wifi? No Problem!</a></h4>
+        <div class="media-info">
+            Resume，共65个应用        </div>
+        为之后要开始的暑假两个月无WiFi生活作准备ε(┬┬﹏┬..    </div>
+</div>
+                <div id="album-3088776" class="media">
+    <a class="pull-left" href="/album/3088776">
+        <img class="media-object" src="http://image.coolapk.com/apk_logo/2016/0108/12202_1452248424_4592.png">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="/album/3088776">酷安新手指南</a></h4>
+        <div class="media-info">
+            Resume，共26个应用        </div>
+        #酷安七周年#
+酷安内部的现象级应用，供新手把玩入门。作..    </div>
+</div>
+                <div id="album-3009004" class="media">
+    <a class="pull-left" href="/album/3009004">
+        <img class="media-object" src="http://p17.qhimg.com/t01217ba3bd67d7b54f.png">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="/album/3009004">Best of Resume's Albums(Deluxe version)</a></h4>
+        <div class="media-info">
+            Resume，共124个应用        </div>
+        First anniversary of me maki..    </div>
+</div>
+                <div id="album-2971239" class="media">
+    <a class="pull-left" href="/album/2971239">
+        <img class="media-object" src="http://image.coolapk.com/apk_logo/2015/0619/408649_1434703847_1981.png">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="/album/2971239">[RE]救我！！竟然不想搞机了〒▽〒</a></h4>
+        <div class="media-info">
+            Resume，共24个应用        </div>
+        列出目前还残存在手机里的App，几乎没什么特色，请各位搞..    </div>
+</div>
+                <div id="album-2819609" class="media">
+    <a class="pull-left" href="/album/2819609">
+        <img class="media-object" src="http://image.coolapk.com/apk_logo/2016/0310/12202_1457574190_6693.png">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="/album/2819609">[RE]既不花钱也不花良心</a></h4>
+        <div class="media-info">
+            Resume，共35个应用        </div>
+        有那么一段时间我在考虑如果没有破解版的Office Su..    </div>
+</div>
+                <div id="album-2587739" class="media">
+    <a class="pull-left" href="/album/2587739">
+        <img class="media-object" src="http://image.coolapk.com/apk_logo/2014/0512/12202_1399872723_0264.png">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="/album/2587739">[RE]新年安心应用年货清单</a></h4>
+        <div class="media-info">
+            Resume，共32个应用        </div>
+        放下手机，立地成乖宝宝。两只手陪家里人，全心意过中国年(..    </div>
+</div>
+            </div>
+</div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="popovers" style="height: 0;overflow: hidden;">
+    <div id="replyFormPopover" style="display: none;">
+        <form class="ex-reply-form" action="/do?c=feed&m=reply" method="post"
+              onsubmit="$(this).exRequest();return false;">
+            <input type="hidden" name="postSubmit" value="1"/>
+            <input type="hidden" name="requestHash" value="b02c8bdeoq557o"/>
+            <input type="hidden" name="requestFrom" value="album_view"/>
+            <input type="hidden" name="rtype" value="feed"/>
+            <input type="hidden" name="rid" value="0"/>
+            <div class="alert hide ex-request-alert"></div>
+            <div class="input-group">
+                <span class="input-group-addon icomoon icomoon-smile" data-toggle="exPopover"
+                      data-popover="#emoticonsPopover" data-target=".ex-reply-panel>form>div>textarea" data-dock="left"
+                      data-placement="top"></span>
+                <textarea name="message" class="form-control" data-auto-height="40"
+                          onkeydown="$(this).exKeyDown(event);" onkeyup="$(this).exKeyUp(event);"></textarea>
+                <span class="input-group-addon btn btn-success" onclick="$('.ex-reply-panel>form').submit();">回复</span>
+            </div>
+        </form>
+    </div>
+    <div id="notificationPopover" class="popover fade bottom fixed ex-popover ex-notification" style="display: none;">
+        <button type="button" class="close" aria-hidden="true"
+                onclick="$('#exNotifier').exNotify('hide');">&times;</button>
+        <div class="popover-content list-group"></div>
+    </div>
+    <div id="emoticonsPopover" class="popover fade bottom ex-popover" style="display: none;">
+        <div class="arrow"></div>
+        <div class="popover-content"></div>
+    </div>
+    <div id="commentFormPicPopover" class="popover fade bottom ex-popover" style="display: none;">
+        <div class="arrow"></div>
+        <div class="popover-content">
+            <button type="button" class="btn btn-link btn-sm ex-btn-glyphicon" id="commentFormPic"
+                    data-toggle="exUpload" data-upload-type="image" data-upload-dir="feed" data-preview-ext=".s.jpg"
+                    data-upload-callback="$('#commentFormPic_remove').show();" value="上传图片"></button>
+        </div>
+    </div>
+    <div id="commentForm2PicPopover" class="popover fade bottom ex-popover" style="display: none;">
+        <div class="arrow"></div>
+        <div class="popover-content">
+            <button type="button" class="btn btn-link btn-sm ex-btn-glyphicon" id="commentForm2Pic"
+                    data-toggle="exUpload" data-upload-type="image" data-upload-dir="feed" data-preview-ext=".s.jpg"
+                    data-upload-callback="$('#commentForm2Pic_remove').show();" value="上传图片"></button>
+        </div>
+    </div>
+</div>
+
+<div class="ex-dockbar hidden-xs">
+    <a href="javascript:void(0);" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="返回顶部"
+       onclick="$(this).exScrollTo(0);"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    <a href="/apk/com.coolapk.market" class="btn btn-default" data-toggle="popover" data-placement="left"
+       data-trigger="hover" data-container="body" data-html="true" title="扫描二维码下载酷市场"
+       data-content="<div style='text-align:center;'><img class='ex-apk-qrcode ex-img-loading-2x' src='/qr?t=apk&v=NDU5OQ&h=9ae89ee1'/></div>"><span
+            class="glyphicon glyphicon-qrcode"></span></a>
+    <a href="javascript:void(0);" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="转到底部"
+       onclick="$(this).exScrollTo('.ex-footer');"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>
+
+<div class="container hidden-xs">
+    <div class="ex-footer">
+        <div class="footer-links">
+            <a href="/about/about.html">关于我们</a> &middot;
+            <a href="/about/contact.html">联系我们</a> &middot;
+            <a href="/about/jobs.html">加入我们</a> &middot;
+            <a href="/about/ads.html">广告服务</a> &middot;
+            <a href="https://developer.coolapk.com">酷安开发者平台</a> &middot;
+            <a href="/about/copyright.html">版权声明</a> &middot;
+            <a href="/about/history.html">发展历程</a> &middot;
+            <a href="/about/rss.html">RSS订阅</a>
+        </div>
+        <div class="footer-copyright">
+            <span>酷安网V5.0 | <a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备15030494号-2</a> | 粤网文〔2016〕2468-477号 | 粤IAS备 201704260017</span>
+            <span class="pull-right">Copyright &copy; 2010-2015 酷安网, All Rights Reserved.</span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F7132d8577cc4aa4ae4ee939cd42eb02b' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

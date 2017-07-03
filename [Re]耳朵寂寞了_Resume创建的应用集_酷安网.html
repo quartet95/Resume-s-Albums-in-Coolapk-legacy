@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+<title>[Re]耳朵寂寞了_Resume创建的应用集_酷安网</title>
+<meta name="description" content="电台入选标准：
+♠绝对绝对不能只有手机爱屁屁
+♥尤其喜欢颜值高而且音乐刊目还有文字介绍的
+♣基本不能接受手机网页端还要Flash Player的
+♦目标是让耳朵怀孕并生一堆小宝宝
+◎欢迎酷友推荐符合标准的电台，音乐类最好。不介意挖坟。
+
+个人已经不用流媒体了，耳朵寂寞了(＞﹏＜)
+精神洁癖，不能忍受国内的版权之争，而且本人音乐口味又很欧美。其实这样说的话Apple Music应该不错嘛，然而我是苹果黑(。_。)
+所以还能怎么办捏，继续折腾呗（。－_－。）"/>
+<link type="text/css" rel="stylesheet" href="http://static.coolapk.com/bootstrap/3.2.0/css/bootstrap.min.css" media="all">
+<link type="text/css" rel="stylesheet" href="/static/fonts/fix.css" media="all"/>
+<link type="text/css" rel="stylesheet" href="http://static.coolapk.com/v5/css/style.css?1408200" media="all"/>
+<script type="text/javascript" src="http://static.coolapk.com/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="http://static.coolapk.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://static.coolapk.com/kindeditor/4.1.10/kindeditor-min.js"></script>
+<script type="text/javascript" src="http://static.coolapk.com/jkit/jkit.js?1412020"></script>
+<script type="text/javascript" src="http://static.coolapk.com/v5/js/app.js"></script>
+<script type="text/javascript">
+var kdeOptions={cssData:'body{font-size:14px} p{margin:15px auto;}',uploadJson:'/do?c=upload&m=kdeUpload',fileManagerJson:'/do?c=upload&m=kdeExplorer',allowFileManager:true,allowFileUpload:true,allowImageUpload:true,allowFlashUpload:false,allowMediaUpload:false};
+</script>
+</head>
+<body data-uid="568993" data-request-app="Web" data-request-hash="ec266b87oq5539">
+
+<div class="navbar navbar-inverse navbar-fixed-top ex-navbar" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-menu">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">酷安网</a>
+            <a href="javascript:void(0);" class="ex-navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-form"><span class="glyphicon glyphicon-search"></span></a>
+            <a href="/home" class="ex-navbar-toggle"><span class="glyphicon glyphicon-user"></span></a>
+            <a href="/notification" class="ex-navbar-toggle"><span class="glyphicon glyphicon-bell"></span><span class="notification-count"></span></a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-left navbar-collapse-menu">
+            <ul class="nav navbar-nav">
+                <li><a href="/">首页</a></li>
+                <li><a href="/apk/">应用</a></li>
+                <li><a href="/game/">游戏</a></li>
+                <li><a href="/faxian/">发现频道</a></li>
+                <li><a href="/album/">应用集</a></li>
+                <li><a href="https://developer.coolapk.com">开发者平台</a></li>
+                <li><a href="/apk/com.coolapk.market">下载手机客户端</a></li>
+            </ul>
+        </div>
+        <div id="exNotifier" class="collapse navbar-collapse navbar-right hidden-xs" data-toggle="exNotify" data-uid="568993" data-popover="#notificationPopover" data-dock="right" data-top="40" data-margin="0">
+            <ul class="nav navbar-nav ex-login-navbar">
+                <li class="visible-sm"><a href="javascript:void(0);" data-toggle="collapse" data-target=".navbar-collapse-form"><span class="glyphicon glyphicon-search"></span></a></li>
+                                <li class="dropdown">
+                    <a href="/home" class="dropdown-toggle" data-toggle="dropdown" data-hover="exDropdown" onclick="location.href='/home';">Resume</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/home">我的酷安</a></li>
+                        <li><a href="/u/568993">我的主页</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li><a href="/settings">设置</a></li>
+                        <li><a href="/settings/profile">个人资料</a></li>
+                        <li><a href="/settings/avatar">我的头像</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li><a href="/account/logout">退出</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="/notification" class="dropdown-toggle" data-toggle="dropdown" data-hover="exDropdown" onclick="location.href='/notification';">消息<span class="notification-badge"></span><b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="menu-item-notification" href="/notification">通知<span class="count pull-right"></span></a></li>
+                        <li class="divider" role="presentation"></li>
+                        <li><a class="menu-item-atme" href="/notification/atme">@我的动态<span class="count pull-right"></span></a></li>
+                        <li><a class="menu-item-atcommentme" href="/notification/atcommentme">@我的评论<span class="count pull-right"></span></a></li>
+                        <li><a class="menu-item-commentme" href="/notification/commentme">回复我的评论<span class="count pull-right"></span></a></li>
+                        <li class="divider" role="presentation"></li>
+                        <li><a class="menu-item-message" href="/message">私信<span class="count pull-right"></span></a></li>
+                    </ul>
+                </li>
+                            </ul>
+        </div>
+        <div class="collapse navbar-collapse navbar-right navbar-collapse-form">
+            <form class="navbar-form ex-navbar-form" role="search" action="/search" method="get">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control input-sm" placeholder="阴阳师" value=""/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default btn-sm" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            </form>
+        </div><!-- /.navbar-collapse -->
+    </div>
+</div>
+
+<div class="ex-page-header hidden-xs">
+    <div class="container">
+        <div class="ex-page-topbar">
+            <div class="ex-page-titlebar">
+                <h1 class="pull-left"><a href="/album">应用集</a></h1>
+                <a href="/album/recommend" class="btn btn-link pull-left">精选推荐</a>
+                <a href="/album/hot" class="btn btn-link pull-left">热门浏览</a>
+                <a href="/album/newest" class="btn btn-link pull-left">刚刚创建</a>
+                <span class="pull-right">
+                    <a href="/album/create" class="btn btn-link ex-link-red">我也要创建应用集，立刻创建应用集</a>
+                    <a href="/album/create" class="btn btn-default">创建应用集</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ex-page-tabbar visible-xs">
+    <ul class="nav nav-tabs ex-nav-tabs nav-tabs-4">
+        <li class="active"><a href="/album">应用集</a></li>
+        <li><a href="/album/recommend">推荐</a></li>
+        <li><a href="/album/hot">热门</a></li>
+        <li><a href="/album/newest">最新</a></li>
+    </ul>
+</div>
+
+<div class="container ex-container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel panel-default ex-card">
+                <div class="panel-heading media ex-card-header ex-card-large-header">
+                    <!--
+                    <a class="pull-left" href="/album/1829219">
+                        <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0219/257251_1455850468_8789.png">
+                    </a>
+                    -->
+                    <div class="media-body">
+                        <h2 class="media-heading">[Re]耳朵寂寞了</h2>
+                        <div class="media-info">
+                            <span class="pull-right">
+                                                            <a href="/album/edit?id=1829219">编辑</a>
+                                                                                    </span>
+                            由 <a href="/u/568993">Resume</a> 2016-08-13创建，共40个应用
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body ex-card-body">
+                    <p>电台入选标准：<br />
+♠绝对绝对不能只有手机爱屁屁<br />
+♥尤其喜欢颜值高而且音乐刊目还有文字介绍的<br />
+♣基本不能接受手机网页端还要Flash Player的<br />
+♦目标是让耳朵怀孕并生一堆小宝宝<br />
+◎欢迎酷友推荐符合标准的电台，音乐类最好。不介意挖坟。<br />
+<br />
+个人已经不用流媒体了，耳朵寂寞了(＞﹏＜)<br />
+精神洁癖，不能忍受国内的版权之争，而且本人音乐口味又很欧美。其实这样说的话Apple Music应该不错嘛，然而我是苹果黑(。_。)<br />
+所以还能怎么办捏，继续折腾呗（。－_－。）</p>
+                </div>
+            </div>
+            <div class="panel panel-default ex-card">
+                <div class="ex-card-body">
+                    <ul class="media-list ex-card-app-list ex-card-album-app-list">
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/fm.touhou.touhoufm">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/fm.touhou.touhoufm">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0219/257251_1455850468_8789.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/fm.touhou.touhoufm" class="pull-left">TouHou.FM</a>
+                                                                    </h4>
+                                <div class="media-intro">原来是东方啊。。。。。。估计又是二次元会玩系列つ﹏⊂，让我这个三次元的人感觉踏进错误的世界。
+★touhou.fm
+顺便想看看因为这个新的封面进来的人有多少个(✿◡‿◡)</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.blueorbit.Muzzik">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.blueorbit.Muzzik">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0106/12202_1452041074_1686.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.blueorbit.Muzzik" class="pull-left">马赛克</a>
+                                                                    </h4>
+                                <div class="media-intro">跟你说来深圳南山区以后从CoolMarket下载app速度飞起，是不是因为有什么圣光啊╰(￣▽￣)╭
+但是这个Muzzik我就加载不出来了，有点伤心，毕竟颜值挺高的。属于用户分享音乐的类型，所以可以说带社交性质
+★ muzziker.com ，和app的界面设计非常一致，总归是这些有点良心的才会做手机网页了。音乐口味嘛。。因为是用户分享所以可能比落网那些大众一些。</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="https://play.google.com/store/apps/details?id=fm.tuba.android">
+                            <a class="pull-left" href="https://play.google.com/store/apps/details?id=fm.tuba.android">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/album/2016/0813/568993_1471069345_1525.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="https://play.google.com/store/apps/details?id=fm.tuba.android" class="pull-left">Tuba.FM</a>
+                                    <span style="font-size: 12px;">&nbsp;来自Google Play</span>                                </h4>
+                                <div class="media-intro">喜欢异域风情的有耳福啦，因为这个
+★ fm.tuba.pl 是波兰的哦（其实你们看域名也看得出来(￣┰￣*)）</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/org.npr.one">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/org.npr.one">
+                                <img class="media-object img-rounded" src="http://p9.yx-s.com/t01e9cc7359d95a950a.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/org.npr.one" class="pull-left">NPR One</a>
+                                                                    </h4>
+                                <div class="media-intro">NPR是美国国家公共广播台，，，欸壮士你别走。我等会就会说到音乐上去。
+NPR主要的当然是新闻，所有新闻都有录音可以听。
+但是它还有电台音乐，我一般进去了就听classical里面的电台
+★ npr.org ，手机电脑网页都可以听。随便摸索一番就知道音乐电台在哪了。边听音乐边看新闻真的是非常舒爽。新闻栏目也有Music News可以看。
+这个app是纯电台的，界面清新简约MD设计，有音乐周刊可以听。（它家另一个客户端NPRNews是只有看听新闻的但界面有点古老我就不放了</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.kanjian.music">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.kanjian.music">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0106/12202_1420508015_9036.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.kanjian.music" class="pull-left">看见音乐</a>
+                                                                    </h4>
+                                <div class="media-intro">音乐和界面都有个性，属于独立音乐推荐，各国音乐都有，类似于现在比较有名的落网吧，但是个人感觉界面更精致。音乐丰富度非常适合我这种杂食者，古典后摇新世纪POP电子我都喜欢
+★ kanjian.com
+(≧∇≦)ﾉ</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/net.luoo.LuooFM">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/net.luoo.LuooFM">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/1026/0_1477445411_1367.png.t.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/net.luoo.LuooFM" class="pull-left">落网</a>
+                                                                    </h4>
+                                <div class="media-intro">一年前忽然走红的独立音乐分享社区，其中的古典和后摇版块我非常喜欢一般都会听，世界各地的独立音乐都有推荐。估计你们都用过了我就不多说些什么。
+★ luoo.net ，首页没有手机版，但是期刊的页面是有手机版视图的，有些浏览器可能因为内核原因不支持手机网页音乐播放</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.kibey.echo">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.kibey.echo">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0918/0_1474177908_3786.png.t.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.kibey.echo" class="pull-left">echo回声</a>
+                                                                    </h4>
+                                <div class="media-intro">也是用户分享，热热闹闹的。其实这类音乐社区都是一开始不习惯，用着用着，慢慢调教，多关注些自己喜欢的人就好了
+★ app-echo.com
+虽说有网页版，但是跟豆瓣一刻的网页端一样只在网页显示每日推荐内容，完整内容还是得用客户端</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.douban.radio">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.douban.radio">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/1231/12202_1451540918_0227.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.douban.radio" class="pull-left">豆瓣FM</a>
+                                                                    </h4>
+                                <div class="media-intro">历史悠久，名闻遐迩
+电台分类非常细致对自己的口味比较清楚的人可以轻松找到适合自己的电台，当然不清楚自己需求的也可以听推荐的电台
+★ douban.fm 手机端电台分类比电脑端少些，但是其实随便听听够用
+音乐质量很有保障，不知道是不是因为网页界面把我迷住了还是什么，蛮喜欢他家电台的歌</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.fvd">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.fvd">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2013/0407/com.fvd.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.fvd" class="pull-left">GetThemAll下载器软件</a>
+                                                                    </h4>
+                                <div class="media-intro">此处插播一则广告(*╯3╰)
+用这货下载网络上检测到的媒体文件（包括音频），保存你偶然听到的好音乐
+发现这应用是完全的偶然，它图标跟之前在火狐上用的媒体嗅探插件一模一样所以瞬间引起了注意。要是已经在用火狐的直接去“最多人用”的插件区下载插件就好了</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.tencent.radio">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.tencent.radio">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0605/408649_1433493661_4116.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.tencent.radio" class="pull-left">企鹅FM</a>
+                                                                    </h4>
+                                <div class="media-intro">其实很久以前在QQ音乐里面看到腾讯对新发的FM进行推广的时候我是拒绝的。毕竟觉得不会是什么良心产品。但是最后发现还可以。大概是因为不是什么热门产品耍不了什么流氓？（嗯我偏见很重）
+★ fm.qq.com 可以收听到所有电台的，没有像echo一样设置什么内容限制的门槛
+由于是综合性FM，除了音乐还有很多其他</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.audioaddict.di">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.audioaddict.di">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/1201/408649_1448950592_1607.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.audioaddict.di" class="pull-left">数字音乐电台:DI Radio</a>
+                                                                    </h4>
+                                <div class="media-intro">最近才开始听的，因为主要是电子音乐台我嫌比较单一所以犹豫了一段时间才下载的。喜欢电子的不要错过，频道蛮多总会找到自己喜欢的。
+★ di.fm ，不过这货的网页版我就不好意思说什么了，播放要flash感觉简直在逗我ヽ（≧□≦）ノ</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.audioaddict.cr">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.audioaddict.cr">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0406/257251_1459914027_9283.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.audioaddict.cr" class="pull-left">古典电台:Classical Radio</a>
+                                                                    </h4>
+                                <div class="media-intro">古典才是我真正的热情啊，这个栏目够多哟
+★ classicalradio.com 可是我跟你说这货手机网页版跟熟悉音乐电台一样要！Adobe!Flash!Player！</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.audioaddict.sky">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.audioaddict.sky">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0824/257251_1440404078_3617.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.audioaddict.sky" class="pull-left">电台音乐RadioTunes</a>
+                                                                    </h4>
+                                <div class="media-intro">也许你应该找到规律了，该开发者的三个应用对应的手机网页版。。都是要Flash的
+★ radiotunes.com
+而且，这开发者的东西基本上都有30min后限制播放的习惯，但是内容是不错的也就忍了，可以买高级会员去广告</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.calm.android">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.calm.android">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0423/97100_1429777358_0792.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.calm.android" class="pull-left">静静Calm</a>
+                                                                    </h4>
+                                <div class="media-intro">我想静静〒▽〒了
+白噪音，自然场景里面我最喜欢雨声。
+★ calm.com 跟你们说手机端网页不能播，UA切成电脑就好了</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.baidu.baidufm">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.baidu.baidufm">
+                                <img class="media-object img-rounded" src="http://p5.yx-s.com/t01f8cb2dc00049243d.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.baidu.baidufm" class="pull-left">百度随心听</a>
+                                                                    </h4>
+                                <div class="media-intro">大厂良心多数要么活不久被砍，要么千年不更新随机诈尸，要么就变热门之后变质
+这货13年以后没更新过，但是服务还可以用。
+★ fm.baidu.com 直接听比较舒服，毕竟手机里面装这么个丑丑的app感觉浑身不舒服</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/fm.qingting.qtradio">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/fm.qingting.qtradio">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0612/12202_1465729517_2677.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/fm.qingting.qtradio" class="pull-left">蜻蜓.fm</a>
+                                                                    </h4>
+                                <div class="media-intro">没记错的话算是国内比较早火起来的一家综合性FM了，新闻、小说、音乐、戏曲、影视、广播剧都有。对它印象一直都蛮好的。
+★ qingting.fm
+很久以前还可以不用网络利用手机FM模块听广播的，现在没了</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.simplecity.amp_pro">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.simplecity.amp_pro">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0421/12202_1429581363_5654.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.simplecity.amp_pro" class="pull-left">Shuttle+ Music Player</a>
+                                                                    </h4>
+                                <div class="media-intro">此处插播第二条广告啦(๑•̀ㅂ•́)و✧
+我（木耳）比较喜欢的播放器，界面个人感觉比Phonograph好看哦（虽然图标不怎么好看）
+打开app就会自动扫描新添加的音乐，而不是像Phonograph一样要等安卓媒体库重启手机时的更新</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.ximalaya.ting.android">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.ximalaya.ting.android">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0707/12202_1436226637_1388.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.ximalaya.ting.android" class="pull-left">喜马拉雅</a>
+                                                                    </h4>
+                                <div class="media-intro">蜻蜓后面火起来的，感觉网络FM竞争也蛮多的。也是综合性的，比如百家讲坛IT科技什么的。
+★ ximalaya.com ，手机网页版对app推广有点多，打开一些页面会弹下载客户端的提示，首页的客户端广告也是比别家大一倍。￣へ￣</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.yinyuetai.ui">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.yinyuetai.ui">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2014/0716/12202_1405499370_0443.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.yinyuetai.ui" class="pull-left">音悦台</a>
+                                                                    </h4>
+                                <div class="media-intro">我觉得没有什么好说的。。这么老牌的MV平台大家都知道。网页版也不错。
+★ yinyuetai.com
+而且没有像QQ音乐那样直接把“My Fair Lady”一整部电影当一个MV放出来的这种低级错误。（也可能是版权原因？）</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.vevo">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.vevo">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0812/257251_1439365396_393.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.vevo" class="pull-left">Vevo</a>
+                                                                    </h4>
+                                <div class="media-intro">真的是各种MV，逛Youtube的绝对听说过所以我就不多介绍了
+★ vevo.com</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.github.sumimakito.bilisound">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.github.sumimakito.bilisound">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0321/408649_1458529994_6899.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.github.sumimakito.bilisound" class="pull-left">Bilisound</a>
+                                                                    </h4>
+                                <div class="media-intro">B站音乐那么多，不愁找不到耳朵的老公啊。这款app可以下载哔哩哔哩视频里的音乐
+★ bilibilijj.com 这个网站不是对应的，只是功能对应，可以下载对应视频的视频文件或者音频文件。网页上还有一个播放背景音乐的模块所以当成网页FM也是没什么问题的，每次去听都是ACG的音乐略审美疲劳（￣～￣）</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.google.android.apps.youtube.music">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.google.android.apps.youtube.music">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/1113/408649_1447378334_7768.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.google.android.apps.youtube.music" class="pull-left">YouTube音乐</a>
+                                                                    </h4>
+                                <div class="media-intro">CD图标好看(*^▽^*)
+这货其实没有网页版啦
+我想分享的是一个只有网页没有app的音乐站，这样岂不是就互补了哇哈哈哈哈
+★ tubidy.mobi ，都是MV，提供下载，下载的时候可以选择格式，mp3mp43gp都有</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.sing.client">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.sing.client">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0402/97100_1427961541_5189.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.sing.client" class="pull-left">5sing原创音乐</a>
+                                                                    </h4>
+                                <div class="media-intro">不得不说国内听翻唱还是5sing比较老牌了，周围还有同学比较狂热地在里面赞助自己喜欢的民间歌手。
+不过随着网易云音乐这类能开设主播电台和虾米那种虾米音乐人的计划使得翻唱发烧友有了更多的选择。5sing的热度也相对有些减弱
+★ 5sing.kugou.com 看这域名不要惊讶，5sing主办方就是酷狗。网页端没有专门做手机版，不过相比之下比那些强制跳转到安卓客户端下载页面的公司还是好多了的。</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.xinli.fm">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.xinli.fm">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0123/97100_1421996825_8494.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.xinli.fm" class="pull-left">心理FM</a>
+                                                                    </h4>
+                                <div class="media-intro">★ m.xinli001.com/fm/
+欸，好像混进了奇怪的电台</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.kkmusicfm">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.kkmusicfm">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0518/408649_1463566701_4164.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.kkmusicfm" class="pull-left">对眼猫</a>
+                                                                    </h4>
+                                <div class="media-intro">第三条也是最后一条推广，给古典音乐迷。
+国内最大的古典音乐曲库是哪家啊大声告诉我φ(゜▽゜*)♪
+对啦是库客音乐
+这就是库客出的FM，没有网页版（所以我叫把这条叫推广嘛）
+库客自身的那个客户端要登录才能听歌曲，不然你就只能对着曲目看看，估计这也是小编不上架库客的原因？
+虽然这个没电台但是我找到了有电台的新芭网
+★ sin80.com
+这个自称古典音乐门户的网站确实信息很全哒</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.stitcher.app">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.stitcher.app">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2013/0624/com.stitcher.app.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.stitcher.app" class="pull-left">Stitcher收音机</a>
+                                                                    </h4>
+                                <div class="media-intro">没有帐号所以没有体验一定要登录才能用的客户端，但是网页端
+★ stitcher.com 的加载速度一开始真的是奇慢无与比啊。不过，科学上网之后可以愉快地冲浪了，内容丰富多彩，不仅限于音乐(′▽`〃)</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="https://play.google.com/store/apps/details?id=com.bbc.globaliplayerradio.international">
+                            <a class="pull-left" href="https://play.google.com/store/apps/details?id=com.bbc.globaliplayerradio.international">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/album/2016/0814/568993_1471141113_1121.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="https://play.google.com/store/apps/details?id=com.bbc.globaliplayerradio.international" class="pull-left">BBC iPlayer Radio</a>
+                                    <span style="font-size: 12px;">&nbsp;来自Google Play</span>                                </h4>
+                                <div class="media-intro">听直播的radio网页提示说一定要用这个app才可以，不过在
+★ bbc.co.uk 里面的music栏目会有推荐的音乐电台可以直接听，在radio栏目的worldservice栏目的已播放内容还可以下载mp3文件。
+质量我觉得不用多说吧，这可是人家英国国广哦o(*////▽////*)q</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.yufm.deepspace">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.yufm.deepspace">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0617/257251_1434504597_1252.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.yufm.deepspace" class="pull-left">章鱼 FM</a>
+                                                                    </h4>
+                                <div class="media-intro">一年多以前用清新的界面和多样的电台在FM界掀起了一阵波浪，似乎创始人还蛮有来头来着。不过后面就慢慢平静了（听个电台还要注册我不太愿意）
+★ octo.fm ，网页端电台有限，没有客户端多的啦</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.dashradio.dash">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.dashradio.dash">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0924/408649_1443084227_843.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.dashradio.dash" class="pull-left">Dash Radio</a>
+                                                                    </h4>
+                                <div class="media-intro">界面蛮喜欢，内容就是真的是广播了，50多个频道。
+★ dashradio.com ，听了之后我发现，原来，我对欧美广播，一无所知</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.lt.adamlee.newfeatures">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.lt.adamlee.newfeatures">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0724/408649_1437705216_4134.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.lt.adamlee.newfeatures" class="pull-left">悦读FM</a>
+                                                                    </h4>
+                                <div class="media-intro">你好，欢迎收听，悦读FM，倾听，文字的声音，我是，雨夜书简。
+★ yuedu.fm 听美文，感觉还是有点新意的</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.TailoredMusic.RainyMood">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.TailoredMusic.RainyMood">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2013/0709/com.tailoredmusic.rainymood.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.TailoredMusic.RainyMood" class="pull-left">Rainy Mood</a>
+                                                                    </h4>
+                                <div class="media-intro">由于是13年以后就没再更新了的白噪音软件，所以不是那么引人注目了
+★ rainymood.com
+只有下雨声，雨声雷声声声入耳
+评论区有人分享了白噪音音频提取版mp3。如果是食用app那么可以调节雨声和雷声的大小还可以与其他音乐一起播放。
+顺便再推荐一个
+★ soundrown.com 也是播放白噪，但是还没有做出对应的app</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/de.radio.android">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/de.radio.android">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0815/8e45b56a3a7bffb0e9d91c7fe25c28d6-for-30657-o_1aq5vr6v84tklbm53b1kkvoal1i-uid-97100.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/de.radio.android" class="pull-left">radio.net</a>
+                                                                    </h4>
+                                <div class="media-intro">这个是真的全是电台，号称自己有全球超过30000的电台什么都有，所以你知道喜欢什么电台的话去搜就好了，暂时不知道的话就只先听听编者精选。
+★ radio.net ，嗯，客户端要先登录网页端不用。</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/bubei.tingshu">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/bubei.tingshu">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/0418/12202_1429339452_6417.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/bubei.tingshu" class="pull-left">懒人听书</a>
+                                                                    </h4>
+                                <div class="media-intro">眼睛累了就听书吧，之前是人声。用TTS听着总觉得有那么点别扭
+★ lrts.me
+没做手机版网页，不过功能不差，只是看着不太方便而已</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.itings.myradio">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.itings.myradio">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0614/12202_1465863902_6208.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.itings.myradio" class="pull-left">考拉FM</a>
+                                                                    </h4>
+                                <div class="media-intro">★ kaolafm.com
+综合类电台差不多都是这个样子。。我表示不能看出差别</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.ifeng.fhdt">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.ifeng.fhdt">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/1012/0_1476255189_2577.png.t.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.ifeng.fhdt" class="pull-left">凤凰FM</a>
+                                                                    </h4>
+                                <div class="media-intro">看到凤凰就觉得值得一听的样纸
+★ m.fm.ifeng.com 
+你少打一个“m. ”，就会发现进去了凤凰博客而不是电台</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.yibasan.lizhifm">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.yibasan.lizhifm">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0606/12202_1465211996_6029.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.yibasan.lizhifm" class="pull-left">荔枝FM</a>
+                                                                    </h4>
+                                <div class="media-intro">★ lizhi.fm</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.justing.justing">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.justing.justing">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/1204/408649_1449216066_2495.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.justing.justing" class="pull-left">静雅思听</a>
+                                                                    </h4>
+                                <div class="media-intro">有点类似懒人听书，但是更加文艺范一些呐
+★ www.justing.com.cn
+无手机网页版，凑合用PC版网页</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="https://play.google.com/store/apps/details?id=pm.mp3.droidmp3nativica">
+                            <a class="pull-left" href="https://play.google.com/store/apps/details?id=pm.mp3.droidmp3nativica">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/album/2016/0907/568993_1473211723_3408.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="https://play.google.com/store/apps/details?id=pm.mp3.droidmp3nativica" class="pull-left">DroidMp3</a>
+                                    <span style="font-size: 12px;">&nbsp;来自Google Play</span>                                </h4>
+                                <div class="media-intro">客户端是个套壳浏览器，有online radio分类听电台，不过也可以搜自己喜欢的音乐免费下载mp3
+★ mp3pn.net/
+用网页版的话下载音乐的时候首先弹出来的是2M的apk文件，就是客户端，关掉再点击一次下载就是mp3了
+有点广告不碍事</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.linker.hfyt">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.linker.hfyt">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2015/1028/257251_1446028445_583.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.linker.hfyt" class="pull-left">CRI HitFM</a>
+                                                                    </h4>
+                                <div class="media-intro">在CRI的众多栏目中算是长相还可以的，内容嘛，听名字就知道是Rock，Pop和电子这一类的
+★ hitfm.cri.cn</div>
+                            </div>
+                        </li>
+                                                <li class="media" data-touch-url="http://www.coolapk.com/apk/com.noisli.noisli">
+                            <a class="pull-left" href="http://www.coolapk.com/apk/com.noisli.noisli">
+                                <img class="media-object img-rounded" src="http://image.coolapk.com/apk_logo/2016/0519/257251_1463639713_3135.png">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="http://www.coolapk.com/apk/com.noisli.noisli" class="pull-left">Noisli</a>
+                                                                    </h4>
+                                <div class="media-intro">又是一款白噪音的爱啪啪，手机版网页可用
+★ noisli.com</div>
+                            </div>
+                        </li>
+                                            </ul>
+                </div>
+                <div class="ex-card-toolbar">
+                    <span class="pull-right">
+                        <button type="button" class="btn btn-default btn-sm" data-reply-type="feed" data-reply-id="1829219" data-username="Resume" onclick="$(this).exComment('replyForm');">添加一个评论</button>
+                    </span>
+                    <button type="button" class="btn btn-default btn-sm" data-request-type="post" data-request-url="/do?c=feed&m=like&id=1829219" data-request-target="this" onclick="$(this).exRequest();"><span class="icomoon icomoon-like"></span>78</button>
+                </div>
+            </div>
+
+            <div id="feedList">
+                <div id="feed-1829219" class="panel panel-default ex-card ex-card-feed">
+    <div class="panel-heading ex-card-header">
+        <h2>应用集评论 ···<span class="dateline pull-right">共89条评论</span></h2>
+    </div>
+    <div class="ex-card-comment">
+        <ul class="media-list ex-card-comment-list">
+                        <li id="reply-2508358" class="media" data-reply-type="reply" data-reply-id="2508358" data-username="滑稽看穿一切">
+    <a class="pull-left" href="/u/496573" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/49/65/73_avatar_small.jpg" alt="滑稽看穿一切"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/496573" class="link">滑稽看穿一切</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2508358" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2508358" data-username="滑稽看穿一切" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        [doge呵斥]    </div>
+</li>
+                        <li id="reply-2508371" class="media" data-reply-type="reply" data-reply-id="2508371" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/496573" class="link">滑稽看穿一切</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2508371" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2508371" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        [doge呵斥]    </div>
+</li>
+                        <li id="reply-2508720" class="media" data-reply-type="reply" data-reply-id="2508720" data-username="妖大人">
+    <a class="pull-left" href="/u/468981" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/46/89/81_avatar_small.jpg" alt="妖大人"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/468981" class="link">妖大人</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2508720" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2508720" data-username="妖大人" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        [doge酷]    </div>
+</li>
+                        <li id="reply-2508758" class="media" data-reply-type="reply" data-reply-id="2508758" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/468981" class="link">妖大人</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2508758" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2508758" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        怎么都只发表情呐[doge呵斥]，不推荐点符合要求的爱啪啪吗    </div>
+</li>
+                        <li id="reply-2508783" class="media" data-reply-type="reply" data-reply-id="2508783" data-username="妖大人">
+    <a class="pull-left" href="/u/468981" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/46/89/81_avatar_small.jpg" alt="妖大人"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/468981" class="link">妖大人</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2508783" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2508783" data-username="妖大人" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        下载音乐我用网易，QQ和虾米，本地的话我用轻听，AIMP，phonograph…    </div>
+</li>
+                        <li id="reply-2508847" class="media" data-reply-type="reply" data-reply-id="2508847" data-username="Fince">
+    <a class="pull-left" href="/u/506292" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/50/62/92_avatar_small.jpg" alt="Fince"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/506292" class="link">Fince</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2508847" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2508847" data-username="Fince" onclick="$(this).exComment('replyForm');">回复(3)</a>
+            </span>
+        </div>
+        apple music买不起[dw哭]    </div>
+</li>
+                        <li id="reply-2509007" class="media" data-reply-type="reply" data-reply-id="2509007" data-username="低头向上爬">
+    <a class="pull-left" href="/u/608960" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/60/89/60_avatar_small.jpg" alt="低头向上爬"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/608960" class="link">低头向上爬</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2509007" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2509007" data-username="低头向上爬" onclick="$(this).exComment('replyForm');">回复(2)</a>
+            </span>
+        </div>
+        <a class="feed-link-url" href="http://www.coolapk.com/apk/com.asus.music" title="华硕音乐播放器:ASUS Music" target="_blank" rel="nofollow">【华硕音乐播放器:ASUS Music】</a> [doge呵斥][doge呵斥][doge呵斥]    </div>
+</li>
+                        <li id="reply-2509029" class="media" data-reply-type="reply" data-reply-id="2509029" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/468981" class="link">妖大人</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2509029" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2509029" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        我就没有什么办法了[dw哭]，流媒体用户你好    </div>
+</li>
+                        <li id="reply-2509032" class="media" data-reply-type="reply" data-reply-id="2509032" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/506292" class="link">Fince</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2509032" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2509032" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        不是就十块钱啊[doge呵斥]    </div>
+</li>
+                        <li id="reply-2509051" class="media" data-reply-type="reply" data-reply-id="2509051" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/608960" class="link">低头向上爬</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2509051" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2509051" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        话说这不是个本地播放器么[doge]    </div>
+</li>
+                        <li id="reply-2509057" class="media" data-reply-type="reply" data-reply-id="2509057" data-username="低头向上爬">
+    <a class="pull-left" href="/u/608960" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/60/89/60_avatar_small.jpg" alt="低头向上爬"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/608960" class="link">低头向上爬</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2509057" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2509057" data-username="低头向上爬" onclick="$(this).exComment('replyForm');">回复(5)</a>
+            </span>
+        </div>
+        [doge呵斥][doge呵斥][doge呵斥]    </div>
+</li>
+                        <li id="reply-2509062" class="media" data-reply-type="reply" data-reply-id="2509062" data-username="低头向上爬">
+    <a class="pull-left" href="/u/608960" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/60/89/60_avatar_small.jpg" alt="低头向上爬"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/608960" class="link">低头向上爬</a>回复<a href="/u/568993" class="link">Resume</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2509062" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2509062" data-username="低头向上爬" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        [doge呵斥][doge呵斥][doge呵斥]    </div>
+</li>
+                        <li id="reply-2509066" class="media" data-reply-type="reply" data-reply-id="2509066" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/608960" class="link">低头向上爬</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2509066" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2509066" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(3)</a>
+            </span>
+        </div>
+        我要的是电台喵[doge]    </div>
+</li>
+                        <li id="reply-2509073" class="media" data-reply-type="reply" data-reply-id="2509073" data-username="低头向上爬">
+    <a class="pull-left" href="/u/608960" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/60/89/60_avatar_small.jpg" alt="低头向上爬"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/608960" class="link">低头向上爬</a>回复<a href="/u/568993" class="link">Resume</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2509073" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2509073" data-username="低头向上爬" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        <a class="feed-link-url" href="http://t.cn/RIKvpof" title="https://play.google.com/store/apps/details?id=com.mediatek.fmradio" target="_blank" rel="nofollow">查看链接»</a>    </div>
+</li>
+                        <li id="reply-2509079" class="media" data-reply-type="reply" data-reply-id="2509079" data-username="低头向上爬">
+    <a class="pull-left" href="/u/608960" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/60/89/60_avatar_small.jpg" alt="低头向上爬"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/608960" class="link">低头向上爬</a>回复<a href="/u/568993" class="link">Resume</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2509079" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2509079" data-username="低头向上爬" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        <a class="feed-link-url" href="http://t.cn/RIKvp0N" title="https://store/apps/details?id=com.mediatek.fmradio" target="_blank" rel="nofollow">查看链接»</a>    </div>
+</li>
+                        <li id="reply-2509195" class="media" data-reply-type="reply" data-reply-id="2509195" data-username="低头向上爬">
+    <a class="pull-left" href="/u/608960" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/60/89/60_avatar_small.jpg" alt="低头向上爬"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/608960" class="link">低头向上爬</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2509195" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2509195" data-username="低头向上爬" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        喜马拉雅电台#(呵呵)    </div>
+</li>
+                        <li id="reply-2509203" class="media" data-reply-type="reply" data-reply-id="2509203" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/608960" class="link">低头向上爬</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2509203" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2509203" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        好的[doge]    </div>
+</li>
+                        <li id="reply-2509213" class="media" data-reply-type="reply" data-reply-id="2509213" data-username="Fince">
+    <a class="pull-left" href="/u/506292" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/50/62/92_avatar_small.jpg" alt="Fince"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/506292" class="link">Fince</a>回复<a href="/u/568993" class="link">Resume</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2509213" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2509213" data-username="Fince" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        不支持微信支付[dw哭]    </div>
+</li>
+                        <li id="reply-2509289" class="media" data-reply-type="reply" data-reply-id="2509289" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/506292" class="link">Fince</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2509289" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2509289" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        那就没办法了[笑哭再见]    </div>
+</li>
+                        <li id="reply-2511331" class="media" data-reply-type="reply" data-reply-id="2511331" data-username="qq1906">
+    <a class="pull-left" href="/u/503931" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/50/39/31_avatar_small.jpg" alt="qq1906"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/503931" class="link">qq1906</a>回复<a href="/u/568993" class="link">Resume</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2511331" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2511331" data-username="qq1906" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        油管音乐大陆不是用不了吗    </div>
+</li>
+                        <li id="reply-2511560" class="media" data-reply-type="reply" data-reply-id="2511560" data-username="lvv15">
+    <a class="pull-left" href="/u/391683" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/39/16/83_avatar_small.jpg" alt="lvv15"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/391683" class="link">lvv15</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2511560" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2511560" data-username="lvv15" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        [doge呵斥]    </div>
+</li>
+                        <li id="reply-2511996" class="media" data-reply-type="reply" data-reply-id="2511996" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/503931" class="link">qq1906</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2511996" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2511996" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        是的。。细看我对那个app的评论，我其实只是用它挑个坑而已#(呵呵)#(呵呵)    </div>
+</li>
+                        <li id="reply-2512001" class="media" data-reply-type="reply" data-reply-id="2512001" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/391683" class="link">lvv15</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2512001" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2512001" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        [doge呵斥]    </div>
+</li>
+                        <li id="reply-2514378" class="media" data-reply-type="reply" data-reply-id="2514378" data-username="一吻难求">
+    <a class="pull-left" href="/u/643687" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/64/36/87_avatar_small.jpg" alt="一吻难求"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/643687" class="link">一吻难求</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2514378" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2514378" data-username="一吻难求" onclick="$(this).exComment('replyForm');">回复(2)</a>
+            </span>
+        </div>
+        点唱机不需要重启吧，网易下好了立马就能放，并且个人认为点唱机界面据巨好看#(冷)    </div>
+</li>
+                        <li id="reply-2514431" class="media" data-reply-type="reply" data-reply-id="2514431" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/643687" class="link">一吻难求</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2514431" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2514431" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        shuffle+和点唱机界面都是MD。。你可以试一下比一下细节，点唱机<br />
+网易这些软件下了音乐对本地音乐文件进行改动的时候应该就会更新安卓媒体库的。你可以试试从浏览器打开云盘下载一个mp3然后直接打开看看点唱机能不能播放    </div>
+</li>
+                        <li id="reply-2514455" class="media" data-reply-type="reply" data-reply-id="2514455" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/643687" class="link">一吻难求</a> <span class="dateline">2016-08-13</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2514455" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2514455" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        点唱机是挺好看的喵[喵喵]，应用点评没有说它不好的意思咩（○｀ 3′○）    </div>
+</li>
+                        <li id="reply-2519777" class="media" data-reply-type="reply" data-reply-id="2519777" data-username="苗苗爸爸">
+    <a class="pull-left" href="/u/624244" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/62/42/44_avatar_small.jpg" alt="苗苗爸爸"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/624244" class="link">苗苗爸爸</a> <span class="dateline">2016-08-14</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2519777" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2519777" data-username="苗苗爸爸" onclick="$(this).exComment('replyForm');">回复(3)</a>
+            </span>
+        </div>
+        没有网易云音乐不科学啊    </div>
+</li>
+                        <li id="reply-2519922" class="media" data-reply-type="reply" data-reply-id="2519922" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/624244" class="link">苗苗爸爸</a> <span class="dateline">2016-08-14</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2519922" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2519922" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        因为入选标准第一条呀（在应用集介绍里面）[doge]，网易云手机端没有网页版而且PC网页版又没有电台<br />
+而且集主我已经放弃流媒体了（也写在应用集介绍里面）#(酷)    </div>
+</li>
+                        <li id="reply-2520111" class="media" data-reply-type="reply" data-reply-id="2520111" data-username="HARDCORE">
+    <a class="pull-left" href="/u/364295" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/36/42/95_avatar_small.jpg" alt="HARDCORE"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/364295" class="link">HARDCORE</a>回复<a href="/u/568993" class="link">Resume</a> <span class="dateline">2016-08-14</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2520111" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2520111" data-username="HARDCORE" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        居然知道di我靠。有些听电子的都不知道    </div>
+</li>
+                        <li id="reply-2520311" class="media" data-reply-type="reply" data-reply-id="2520311" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/364295" class="link">HARDCORE</a> <span class="dateline">2016-08-14</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2520311" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2520311" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        多谢夸奖#(吐舌)    </div>
+</li>
+                        <li id="reply-2521134" class="media" data-reply-type="reply" data-reply-id="2521134" data-username="琪露诺">
+    <a class="pull-left" href="/u/445359" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/44/53/59_avatar_small.jpg" alt="琪露诺"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/445359" class="link">琪露诺</a> <span class="dateline">2016-08-14</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2521134" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2521134" data-username="琪露诺" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        见封滚[doge呵斥]    </div>
+</li>
+                        <li id="reply-2521137" class="media" data-reply-type="reply" data-reply-id="2521137" data-username="秦心">
+    <a class="pull-left" href="/u/539132" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/53/91/32_avatar_small.jpg" alt="秦心"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/539132" class="link">秦心</a> <span class="dateline">2016-08-14</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2521137" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2521137" data-username="秦心" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        见封滚[doge呵斥]    </div>
+</li>
+                        <li id="reply-2521144" class="media" data-reply-type="reply" data-reply-id="2521144" data-username="犬走椛">
+    <a class="pull-left" href="/u/648514" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/64/85/14_avatar_small.jpg" alt="犬走椛"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/648514" class="link">犬走椛</a> <span class="dateline">2016-08-14</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2521144" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2521144" data-username="犬走椛" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        见封滚[doge呵斥]    </div>
+</li>
+                        <li id="reply-2521250" class="media" data-reply-type="reply" data-reply-id="2521250" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a> <span class="dateline">2016-08-14</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2521250" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2521250" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        #(笑眼)#(笑眼)    </div>
+</li>
+                        <li id="reply-2521253" class="media" data-reply-type="reply" data-reply-id="2521253" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/539132" class="link">秦心</a> <span class="dateline">2016-08-14</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2521253" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2521253" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        #(乖)#(乖)    </div>
+</li>
+                        <li id="reply-2521255" class="media" data-reply-type="reply" data-reply-id="2521255" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/648514" class="link">犬走椛</a> <span class="dateline">2016-08-14</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2521255" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2521255" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        [doge笑哭][doge笑哭]    </div>
+</li>
+                        <li id="reply-2521692" class="media" data-reply-type="reply" data-reply-id="2521692" data-username="wind_breaker">
+    <a class="pull-left" href="/u/445142" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/44/51/42_avatar_small.jpg" alt="wind_breaker"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/445142" class="link">wind_breaker</a> <span class="dateline">2016-08-14</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2521692" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2521692" data-username="wind_breaker" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        我承认我是被节操引进来的。    </div>
+</li>
+                        <li id="reply-2521707" class="media" data-reply-type="reply" data-reply-id="2521707" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/445142" class="link">wind_breaker</a> <span class="dateline">2016-08-14</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2521707" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2521707" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        [doge呵斥]啊哈    </div>
+</li>
+                        <li id="reply-2522092" class="media" data-reply-type="reply" data-reply-id="2522092" data-username="白言">
+    <a class="pull-left" href="/u/366558" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/36/65/58_avatar_small.jpg" alt="白言"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/366558" class="link">白言</a> <span class="dateline">2016-08-14</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2522092" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2522092" data-username="白言" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        看封面进来的    </div>
+</li>
+                        <li id="reply-2522109" class="media" data-reply-type="reply" data-reply-id="2522109" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/366558" class="link">白言</a> <span class="dateline">2016-08-14</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2522109" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2522109" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        果然酷安粉与二次元粉的交集这么多:smile_cat:    </div>
+</li>
+                        <li id="reply-2522192" class="media" data-reply-type="reply" data-reply-id="2522192" data-username="無邪気な">
+    <a class="pull-left" href="/u/629835" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/62/98/35_avatar_small.jpg" alt="無邪気な"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/629835" class="link">無邪気な</a> <span class="dateline">2016-08-14</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2522192" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2522192" data-username="無邪気な" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        5Sing被收购后，唉    </div>
+</li>
+                        <li id="reply-2522261" class="media" data-reply-type="reply" data-reply-id="2522261" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/629835" class="link">無邪気な</a> <span class="dateline">2016-08-14</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2522261" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2522261" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        国内音乐公司都很会玩[doge]    </div>
+</li>
+                        <li id="reply-2522975" class="media" data-reply-type="reply" data-reply-id="2522975" data-username="Dogfight">
+    <a class="pull-left" href="/u/608980" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/60/89/80_avatar_small.jpg" alt="Dogfight"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/608980" class="link">Dogfight</a> <span class="dateline">2016-08-15</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2522975" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2522975" data-username="Dogfight" onclick="$(this).exComment('replyForm');">回复(7)</a>
+            </span>
+        </div>
+        我也想来南山区#(乖)    </div>
+</li>
+                        <li id="reply-2523029" class="media" data-reply-type="reply" data-reply-id="2523029" data-username="奈何喵">
+    <a class="pull-left" href="/u/484656" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/48/46/56_avatar_small.jpg" alt="奈何喵"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/484656" class="link">奈何喵</a> <span class="dateline">2016-08-15</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2523029" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2523029" data-username="奈何喵" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        不错    </div>
+</li>
+                        <li id="reply-2523032" class="media" data-reply-type="reply" data-reply-id="2523032" data-username="奈何喵">
+    <a class="pull-left" href="/u/484656" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/48/46/56_avatar_small.jpg" alt="奈何喵"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/484656" class="link">奈何喵</a> <span class="dateline">2016-08-15</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2523032" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2523032" data-username="奈何喵" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        网易云音乐不知道算不算    </div>
+</li>
+                        <li id="reply-2523054" class="media" data-reply-type="reply" data-reply-id="2523054" data-username="南琴浪">
+    <a class="pull-left" href="/u/641450" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/64/14/50_avatar_small.jpg" alt="南琴浪"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/641450" class="link">南琴浪</a> <span class="dateline">2016-08-15</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2523054" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2523054" data-username="南琴浪" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        不太懂你们二次元#(滑稽)#(弱)    </div>
+</li>
+                        <li id="reply-2523277" class="media" data-reply-type="reply" data-reply-id="2523277" data-username="岛田半藏">
+    <a class="pull-left" href="/u/593093" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/59/30/93_avatar_small.jpg" alt="岛田半藏"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/593093" class="link">岛田半藏</a> <span class="dateline">2016-08-15</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2523277" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2523277" data-username="岛田半藏" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        良心应用集Mark    </div>
+</li>
+                        <li id="reply-2523411" class="media" data-reply-type="reply" data-reply-id="2523411" data-username="funnnny">
+    <a class="pull-left" href="/u/616708" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/61/67/08_avatar_small.jpg" alt="funnnny"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/616708" class="link">funnnny</a> <span class="dateline">2016-08-15</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2523411" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2523411" data-username="funnnny" onclick="$(this).exComment('replyForm');">回复(4)</a>
+            </span>
+        </div>
+        唔。真的好多电台啊，果然老司机(^_^)    </div>
+</li>
+                        <li id="reply-2523540" class="media" data-reply-type="reply" data-reply-id="2523540" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/608980" class="link">Dogfight</a> <span class="dateline">2016-08-15</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2523540" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2523540" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(1)</a>
+            </span>
+        </div>
+        #(乖)反正放假了过来玩呀    </div>
+</li>
+                        <li id="reply-2523546" class="media" data-reply-type="reply" data-reply-id="2523546" data-username="Resume">
+    <a class="pull-left" href="/u/568993" class="link"><img class="link media-object img-rounded" src="http://avatar.coolapk.com/data/000/56/89/93_avatar_small.jpg" alt="Resume"></a>
+    <div class="media-body">
+        <div class="media-heading">
+            <a href="/u/568993" class="link">Resume</a>回复<a href="/u/484656" class="link">奈何喵</a> <span class="dateline">2016-08-15</span>
+            <span class="pull-right">
+                                <span class="ex-reply-action">
+                    <a href="javascript:void(0);" data-request-type="post" data-request-url="/do?c=feed&m=reportReply&id=2523546" data-request-target="this" onclick="$(this).exRequest();">举报</a> |
+                                    </span>
+                                <a href="javascript:void(0);" data-reply-type="reply" data-reply-id="2523546" data-username="Resume" onclick="$(this).exComment('replyForm');">回复(0)</a>
+            </span>
+        </div>
+        网易云没有手机网页端#(呵呵)，不符合应用集介绍里面写的第一标准喵<br />
+而且网易云家喻户晓啦，不用我介绍给大家#(笑眼)    </div>
+</li>
+                    </ul>
+                <div class="ex-card-comment-more text-center">
+            <ul class="pager" data-toggle="exAutoload" data-url="/feed/1829219?p=%s" data-request-target=".ex-card-comment-list" data-request-alert="this">
+                <li class="disabled"><a href="###">上一页</a></li><li><a href="/feed/1829219?p=2" data-request-target=".ex-card-comment-list" data-request-alert="this" onclick="$(this).exRequest();">下一页</a></li>            </ul>
+        </div>
+                <div class="ex-card-comment-form">
+            <form class="ex-reply-form" action="/do?c=feed&m=reply" method="post" onsubmit="$(this).exRequest();return false;">
+                <input type="hidden" name="postSubmit" value="1" />
+                <input type="hidden" name="requestHash" value="ec266b87oq5539"/>
+                <input type="hidden" name="requestFrom" value="album_view"/>
+                <input type="hidden" name="rtype" value="feed"/>
+                <input type="hidden" name="rid" value="1829219"/>
+                <div class="alert hide ex-request-alert"></div>
+                <div class="input-group">
+                    <span class="input-group-addon icomoon icomoon-smile" data-toggle="exPopover" data-popover="#emoticonsPopover" data-target=".ex-reply-panel>form>div>textarea" data-dock="left" data-placement="top"></span>
+                    <textarea name="message" class="form-control" placeholder="回复Resume:" data-auto-height="40" onkeydown="$(this).exKeyDown(event);" onkeyup="$(this).exKeyUp(event);"></textarea>
+                    <span class="input-group-addon btn btn-success" onclick="$('.ex-card-comment-form>form').submit();">评论</span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="panel panel-default ex-card">
+    <div class="panel-heading ex-card-header">
+        <h2>创建应用集 ···</h2>
+    </div>
+    <div class="ex-card-content">你也可以来创建应用集，应用集可以收藏保存常用的软件列表...</div>
+    <div class="ex-card-wrapper text-center">
+        <a class="btn btn-default" href="/album/create">创建应用集</a>
+    </div>
+</div>
+<div class="panel panel-default ex-card">
+    <div class="panel-heading ex-card-header ex-no-border">
+        <h2>Resume的其他应用集 ···</h2>
+    </div>
+    <div class="ex-card-body media-list ex-card-album-list ex-side-album-list">
+                <div id="album-3313067" class="media">
+    <a class="pull-left" href="/album/3313067">
+        <img class="media-object" src="http://image.coolapk.com/apk_logo/2016/0613/12202_1465784488_0388.png">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="/album/3313067">我们都喜爱屁屁</a></h4>
+        <div class="media-info">
+            Resume，共16个应用        </div>
+        (^。^)一个市场才不够呢，所以平时我都喜欢在哪里找新鲜..    </div>
+</div>
+                <div id="album-3220661" class="media">
+    <a class="pull-left" href="/album/3220661">
+        <img class="media-object" src="http://image.coolapk.com/apk_logo/2017/0106/ic_splash_screen-for-126299-o_1b5pp5kdd1kvu1he61d4p1spfij2q-uid-553418.png">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="/album/3220661">自用图标包</a></h4>
+        <div class="media-info">
+            Resume，共15个应用        </div>
+        自用的。。没点评
+因为图标包这种东西我只能说出“质感，不..    </div>
+</div>
+                <div id="album-3187239" class="media">
+    <a class="pull-left" href="/album/3187239">
+        <img class="media-object" src="http://image.coolapk.com/apk_logo/2014/0703/97100_1404394862_1375.png">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="/album/3187239">No Wifi? No Problem!</a></h4>
+        <div class="media-info">
+            Resume，共65个应用        </div>
+        为之后要开始的暑假两个月无WiFi生活作准备ε(┬┬﹏┬..    </div>
+</div>
+                <div id="album-3088776" class="media">
+    <a class="pull-left" href="/album/3088776">
+        <img class="media-object" src="http://image.coolapk.com/apk_logo/2016/0108/12202_1452248424_4592.png">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="/album/3088776">酷安新手指南</a></h4>
+        <div class="media-info">
+            Resume，共26个应用        </div>
+        #酷安七周年#
+酷安内部的现象级应用，供新手把玩入门。作..    </div>
+</div>
+                <div id="album-3009004" class="media">
+    <a class="pull-left" href="/album/3009004">
+        <img class="media-object" src="http://p17.qhimg.com/t01217ba3bd67d7b54f.png">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="/album/3009004">Best of Resume's Albums(Deluxe version)</a></h4>
+        <div class="media-info">
+            Resume，共124个应用        </div>
+        First anniversary of me maki..    </div>
+</div>
+                <div id="album-2971239" class="media">
+    <a class="pull-left" href="/album/2971239">
+        <img class="media-object" src="http://image.coolapk.com/apk_logo/2015/0619/408649_1434703847_1981.png">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="/album/2971239">[RE]救我！！竟然不想搞机了〒▽〒</a></h4>
+        <div class="media-info">
+            Resume，共24个应用        </div>
+        列出目前还残存在手机里的App，几乎没什么特色，请各位搞..    </div>
+</div>
+                <div id="album-2819609" class="media">
+    <a class="pull-left" href="/album/2819609">
+        <img class="media-object" src="http://image.coolapk.com/apk_logo/2016/0310/12202_1457574190_6693.png">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="/album/2819609">[RE]既不花钱也不花良心</a></h4>
+        <div class="media-info">
+            Resume，共35个应用        </div>
+        有那么一段时间我在考虑如果没有破解版的Office Su..    </div>
+</div>
+                <div id="album-2587739" class="media">
+    <a class="pull-left" href="/album/2587739">
+        <img class="media-object" src="http://image.coolapk.com/apk_logo/2014/0512/12202_1399872723_0264.png">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="/album/2587739">[RE]新年安心应用年货清单</a></h4>
+        <div class="media-info">
+            Resume，共32个应用        </div>
+        放下手机，立地成乖宝宝。两只手陪家里人，全心意过中国年(..    </div>
+</div>
+            </div>
+</div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="popovers" style="height: 0;overflow: hidden;">
+    <div id="replyFormPopover" style="display: none;">
+        <form class="ex-reply-form" action="/do?c=feed&m=reply" method="post"
+              onsubmit="$(this).exRequest();return false;">
+            <input type="hidden" name="postSubmit" value="1"/>
+            <input type="hidden" name="requestHash" value="ec266b87oq5539"/>
+            <input type="hidden" name="requestFrom" value="album_view"/>
+            <input type="hidden" name="rtype" value="feed"/>
+            <input type="hidden" name="rid" value="0"/>
+            <div class="alert hide ex-request-alert"></div>
+            <div class="input-group">
+                <span class="input-group-addon icomoon icomoon-smile" data-toggle="exPopover"
+                      data-popover="#emoticonsPopover" data-target=".ex-reply-panel>form>div>textarea" data-dock="left"
+                      data-placement="top"></span>
+                <textarea name="message" class="form-control" data-auto-height="40"
+                          onkeydown="$(this).exKeyDown(event);" onkeyup="$(this).exKeyUp(event);"></textarea>
+                <span class="input-group-addon btn btn-success" onclick="$('.ex-reply-panel>form').submit();">回复</span>
+            </div>
+        </form>
+    </div>
+    <div id="notificationPopover" class="popover fade bottom fixed ex-popover ex-notification" style="display: none;">
+        <button type="button" class="close" aria-hidden="true"
+                onclick="$('#exNotifier').exNotify('hide');">&times;</button>
+        <div class="popover-content list-group"></div>
+    </div>
+    <div id="emoticonsPopover" class="popover fade bottom ex-popover" style="display: none;">
+        <div class="arrow"></div>
+        <div class="popover-content"></div>
+    </div>
+    <div id="commentFormPicPopover" class="popover fade bottom ex-popover" style="display: none;">
+        <div class="arrow"></div>
+        <div class="popover-content">
+            <button type="button" class="btn btn-link btn-sm ex-btn-glyphicon" id="commentFormPic"
+                    data-toggle="exUpload" data-upload-type="image" data-upload-dir="feed" data-preview-ext=".s.jpg"
+                    data-upload-callback="$('#commentFormPic_remove').show();" value="上传图片"></button>
+        </div>
+    </div>
+    <div id="commentForm2PicPopover" class="popover fade bottom ex-popover" style="display: none;">
+        <div class="arrow"></div>
+        <div class="popover-content">
+            <button type="button" class="btn btn-link btn-sm ex-btn-glyphicon" id="commentForm2Pic"
+                    data-toggle="exUpload" data-upload-type="image" data-upload-dir="feed" data-preview-ext=".s.jpg"
+                    data-upload-callback="$('#commentForm2Pic_remove').show();" value="上传图片"></button>
+        </div>
+    </div>
+</div>
+
+<div class="ex-dockbar hidden-xs">
+    <a href="javascript:void(0);" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="返回顶部"
+       onclick="$(this).exScrollTo(0);"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    <a href="/apk/com.coolapk.market" class="btn btn-default" data-toggle="popover" data-placement="left"
+       data-trigger="hover" data-container="body" data-html="true" title="扫描二维码下载酷市场"
+       data-content="<div style='text-align:center;'><img class='ex-apk-qrcode ex-img-loading-2x' src='/qr?t=apk&v=NDU5OQ&h=9ae89ee1'/></div>"><span
+            class="glyphicon glyphicon-qrcode"></span></a>
+    <a href="javascript:void(0);" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="转到底部"
+       onclick="$(this).exScrollTo('.ex-footer');"><span class="glyphicon glyphicon-chevron-down"></span></a>
+</div>
+
+<div class="container hidden-xs">
+    <div class="ex-footer">
+        <div class="footer-links">
+            <a href="/about/about.html">关于我们</a> &middot;
+            <a href="/about/contact.html">联系我们</a> &middot;
+            <a href="/about/jobs.html">加入我们</a> &middot;
+            <a href="/about/ads.html">广告服务</a> &middot;
+            <a href="https://developer.coolapk.com">酷安开发者平台</a> &middot;
+            <a href="/about/copyright.html">版权声明</a> &middot;
+            <a href="/about/history.html">发展历程</a> &middot;
+            <a href="/about/rss.html">RSS订阅</a>
+        </div>
+        <div class="footer-copyright">
+            <span>酷安网V5.0 | <a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备15030494号-2</a> | 粤网文〔2016〕2468-477号 | 粤IAS备 201704260017</span>
+            <span class="pull-right">Copyright &copy; 2010-2015 酷安网, All Rights Reserved.</span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F7132d8577cc4aa4ae4ee939cd42eb02b' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>
